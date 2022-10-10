@@ -46,3 +46,12 @@ a {
     background: black;
   }
 }
+
+@media (max-width: 768px) {
+  .showcase-main {
+    text-align: center;
+  }
+  .showcase-button {
+    justify-content: center;
+  }
+}

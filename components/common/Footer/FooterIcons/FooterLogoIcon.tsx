@@ -3,7 +3,7 @@ import { FC } from "react";
 export const FooterLogoIcon: FC = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      width="402"
+      width="202"
       height="62"
       {...props}
       viewBox="0 0 402 62"
