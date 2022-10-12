@@ -55,3 +55,15 @@ a {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .cards img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1425px) {
+  .cards img {
+    margin-top: 128px;
+  }
+}

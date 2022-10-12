@@ -28,7 +28,7 @@ export const Showcase: FC = () => {
         </Link>
         </div>
       </div>
-      <div>
+      <div className="cards">
         <img src="/cards.png" alt="" />
       </div>
     </div>
