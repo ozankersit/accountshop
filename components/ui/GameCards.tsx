@@ -2,12 +2,12 @@ import Link from "next/link";
 import { FC, useState } from "react";
 import ListIcon from "../Icons/ListIcon";
 
-export const GameCarts: FC = () => {
+export const GameCards: FC = () => {
   const [lolListCount, lolSetListCount] = useState(0);
   const [valoListCount, valoSetListCount] = useState(0);
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center gap-5 mt-28">
+      <div className="flex flex-wrap justify-center items-center gap-5 mt-28 px-5">
         <Link href="">
           <div className="bg-[url('/lolBg.png')] lg:w-[640px] lg:h-[381px] lg:bg-center bg-right rounded-[7px] md:w-[360px] h-[360px] w-full flex flex-col justify-end cursor-pointer p-[30px]">
             <div className="text-white text-head-bold mb-2.5">
@@ -43,4 +43,4 @@ export const GameCarts: FC = () => {
   );
 };
 
-export default GameCarts;
+export default GameCards;

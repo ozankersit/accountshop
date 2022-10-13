@@ -1,13 +1,17 @@
 import type { NextPage } from 'next'
-import GameCarts from '../components/ui/GameCards'
+import GameCards from '../components/ui/GameCards'
 import Showcase from '../components/ui/Showcase'
+import StatisticsSection from '../components/ui/StatisticsSection'
+import WhyUs from '../components/ui/WhyUs'
 
 const Home: NextPage = () => {
   return (
   <>
   <div>
     <Showcase/>
-    <GameCarts/>
+    <GameCards/>
+    <WhyUs/>
+    <StatisticsSection/>
   </div>
   </>    
   )
