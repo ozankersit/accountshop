@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC, useState } from "react";
-import ListIcon from "../Icons/listIcon";
+import ListIcon from "../Icons/ListIcon";
 
 export const GameCarts: FC = () => {
   const [lolListCount, lolSetListCount] = useState(0);
@@ -9,7 +9,7 @@ export const GameCarts: FC = () => {
     <>
       <div className="flex flex-wrap justify-center items-center gap-5 mt-28">
         <Link href="">
-          <div className="bg-[url('/lolBg.png')] lg:w-[640px] lg:h-[381px] lg:bg-center bg-right rounded-[7px] w-[360px] h-[360px] flex flex-col justify-end cursor-pointer p-[30px]">
+          <div className="bg-[url('/lolBg.png')] lg:w-[640px] lg:h-[381px] lg:bg-center bg-right rounded-[7px] md:w-[360px] h-[360px] w-full flex flex-col justify-end cursor-pointer p-[30px]">
             <div className="text-white text-head-bold mb-2.5">
               League Of Legends
             </div>
@@ -24,7 +24,7 @@ export const GameCarts: FC = () => {
           </div>
         </Link>
         <Link href="">
-          <div className="bg-[url('/valoBg.png')] lg:w-[640px] lg:h-[381px] bg-center rounded-[7px] w-[360px] h-[360px] flex flex-col justify-end cursor-pointer p-[30px]">
+          <div className="bg-[url('/valoBg.png')] lg:w-[640px] lg:h-[381px] bg-center rounded-[7px] md:w-[360px] h-[360px] w-full flex flex-col justify-end cursor-pointer p-[30px]">
             <div className="text-white text-head-bold mb-2.5">
               Valorant
             </div>

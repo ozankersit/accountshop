@@ -1,58 +1,62 @@
 import { FC } from "react";
 import { FooterLogoIcon } from "./FooterIcons/FooterLogoIcon";
+import MasterCardIcon from "../../Icons/MasterCardIcon";
+import VisaIcon from "../../Icons/VisaIcon";
+import InstagramIcon from "../../Icons/InstagramIcon";
+import DiscordIcon from "../../Icons/DiscordIcon";
 
 export const Footer: FC = () => {
   return (
-    <div className="bg-[url('/footerBg.jpg')] w-full items-center justify-center py-[30px] flex flex-wrap bottom-0">
-      <div className="flex items-start w-full justify-evenly">
-        <div className="flex flex-col">
-          <FooterLogoIcon />
-          <div>
-            <div>
-              <span className="text-white text-title-bold">
-                İstanbul/Turkey
-              </span>
-            </div>
-            <div className="py-6">
-              <span className="text-white text-title-bold">Email:</span>
-              <span className="text-white text-title">info@accountshop</span>
-            </div>
-            <div>
-              <span className="text-white text-title-bold">Vergi No:</span>
-              <span className="text-white text-title">
-                324242432 / Lorem Ipsum
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-white text-title-bold">Contents</span>
-          <ul>
-            <li className="text-white text-title cursor-pointer">Games</li>
-            <li className="text-white text-title cursor-pointer">Why Us ?</li>
-            <li className="text-white text-title cursor-pointer">Customers</li>
-            <li className="text-white text-title cursor-pointer">FAQ</li>
-          </ul>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-white text-title-bold">Pages</span>
-          <ul>
-            <li className="text-white text-title cursor-pointer">Home</li>
-            <li className="text-white text-title cursor-pointer">Sign in</li>
-            <li className="text-white text-title cursor-pointer">Sign up</li>
-            <li className="text-white text-title cursor-pointer">Unranked Accounts</li>
-            <li className="text-white text-title cursor-pointer">How Can I Buy ?</li>
-            <li className="text-white text-title cursor-pointer">Account Sell</li>
-          </ul>
-        </div>
-        <div className="flex flex-col">
-          <span className="text-white text-title-bold">Legal</span>
-          <ul>
-            <li className="text-white text-title cursor-pointer">Cookie Policy</li>
-            <li className="text-white text-title cursor-pointer">Privacy Policy</li>
-          </ul>
+    <div className="bg-[url('/footerBg.jpg')] w-full items-center justify-center flex flex-wrap bottom-0">
+    <div className={"max-w-[1280px] w-full lg:py-[30px] py-10 px-5"}>
+     <div className={"w-full flex lg:flex-row flex-col"}>
+       <div>
+         <FooterLogoIcon className={"max-w-[400px] w-full lg:mb-[80px] mb-10"}/>
+         <p className="text-white text-title-bold mb-6">İstanbul / Turkey</p>
+         <p className={"mb-6 flex flex-wrap"}>
+           <span className="text-white text-title-bold">Email:</span>
+           <span className="text-white text-title">info@accountshop</span>
+         </p>
+         <p>
+           <span className="text-white text-title-bold">Vergi No:</span>
+           <span className="text-white text-title">324242432 / Lorem Ipsum</span>
+         </p>
+       </div>
+       <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
+         <p className="text-white text-title-bold mb-6">Contents</p>
+         <p className="text-white text-title cursor-pointer">Games</p>
+         <p className="text-white text-title cursor-pointer">Why Us ?</p>
+         <p className="text-white text-title cursor-pointer">Customers</p>
+         <p className="text-white text-title cursor-pointer">FAQ</p>
+       </div>
+       <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
+         <p className="text-white text-title-bold mb-6">Pages</p>
+         <p className="text-white text-title cursor-pointer">Home</p>
+         <p className="text-white text-title cursor-pointer">Sign in</p>
+         <p className="text-white text-title cursor-pointer">Sign up</p>
+         <p className="text-white text-title cursor-pointer">Unranked Accounts</p>
+         <p className="text-white text-title cursor-pointer">How Can I Buy ?</p>
+         <p className="text-white text-title cursor-pointer">Account Sell</p>
+       </div>
+       <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
+         <p className="text-white text-title-bold mb-6">Legal</p>
+         <p className="text-white text-title cursor-pointer">Cookie Policy</p>
+         <p className="text-white text-title cursor-pointer">Privacy Policy</p>
+       </div>
+     </div>
+      <div className={"w-full border border-white lg:mt-[50px] lg:mb-[30px] mt-5 mb-5"}/>
+      <div className={"w-full flex items-center"}>
+      <div className={"flex gap-5"}>
+        <MasterCardIcon/>
+        <VisaIcon/>
+      </div>
+        <div className={"ml-auto flex gap-5"}>
+          <InstagramIcon/>
+          <DiscordIcon/>
         </div>
       </div>
+    </div>
+
     </div>
   );
 };

@@ -1,6 +1,6 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
-export const ListIcon: FC = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
+export const ListIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="20"

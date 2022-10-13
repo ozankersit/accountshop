@@ -1,6 +1,6 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
-export const FooterLogoIcon: FC = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
+export const FooterLogoIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="202"
@@ -10,7 +10,7 @@ export const FooterLogoIcon: FC = ({ ...props }: React.SVGProps<SVGSVGElement>) 
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_37_236)">
+      <g clipPath="url(#clip0_37_236)">
         <path
           d="M62.1504 61.7544H2.6004C1.1004 61.7544 0.0504036 59.2941 0.600404 57.0306L4.1504 43.1052C5.0504 39.6115 7.1504 37.2988 9.5504 37.2988H55.1004C57.4504 37.2988 59.5504 39.5623 60.4504 43.0068L64.1004 56.9814C64.7004 59.2449 63.6504 61.7544 62.1504 61.7544Z"
           fill="#001871"
@@ -72,11 +72,9 @@ export const FooterLogoIcon: FC = ({ ...props }: React.SVGProps<SVGSVGElement>) 
           fill="white"
         />
       </g>
-      <defs>
-        <clipPath id="clip0_37_236">
-          <rect width="402" height="62" fill="white" />
-        </clipPath>
-      </defs>
+
     </svg>
   );
 };
+
+export default FooterLogoIcon
