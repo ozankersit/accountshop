@@ -5,7 +5,7 @@ import ArrowIcon from "../Icons/ArrowIcon";
 
 export const Showcase: FC = () => {
   return (
-    <div className="flex justify-center items-center flex-wrap px-5">
+    <div className="flex justify-center items-center flex-wrap md:pt-0 px-5 pt-[50px]">
       <div className="flex flex-col">
         <p className="text-3xl-bold text-dark !leading-10 mb-2.5 md:w-[337px] showcase-main">
           Own the game account you want with filtering

@@ -7,15 +7,15 @@ export const StatisticsSection:FC = () => {
         <div className='flex flex-wrap justify-center gap-36'>
             <div className='flex flex-col'>
                 <span className='text-white text-3xl-bold'>54,645</span>
-                <span className='text-white text-3xl-bold'>Completed Orders</span>
+                <span className='text-white text-2xl'>Completed Orders</span>
             </div>
             <div className='flex flex-col'>
                 <span className='text-white text-3xl-bold'>29,380</span>
-                <span className='text-white text-3xl-bold'>Happy Customers</span>
+                <span className='text-white text-2xl'>Happy Customers</span>
             </div>
             <div className='flex flex-col'>
                 <span className='text-white text-3xl-bold'>1000+</span>
-                <span className='text-white text-3xl-bold'>Stock Number</span>
+                <span className='text-white text-2xl'>Stock Number</span>
             </div>
         </div>
       </div>
