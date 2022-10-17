@@ -6,7 +6,6 @@ interface Props {
   content: string,
   defaultState?: boolean,
   title: string,
-  openModal?: void
 }
 
 export const AccordionFaq: FC<Props> = ({content, defaultState = false, title}) => {
