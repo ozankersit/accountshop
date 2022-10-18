@@ -39,7 +39,7 @@ export const Header: FC = () => {
           </span>
         </Link>
         <div className="flex items-center gap-2.5">
-          <Link href="/">
+          <Link href="/login">
             <span className="text-title text-light-blue cursor-pointer whitespace-nowrap">
               Sign in
             </span>
