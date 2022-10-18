@@ -9,6 +9,7 @@ interface Props {
   radius?: string;
   width?: string;
   className?:string;
+  type?: 'submit' | 'reset' | 'button';
 }
 
 const Button: FC<Props> = ({
@@ -20,6 +21,7 @@ const Button: FC<Props> = ({
   radius,
   width,
   className,
+  type,
 }) => {
   return (
     <button
@@ -32,6 +34,7 @@ const Button: FC<Props> = ({
         width,
       }}
       className={`${className}`}
+      type={type}
     >
       {children}
     </button>

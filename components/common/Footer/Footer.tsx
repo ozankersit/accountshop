@@ -7,7 +7,7 @@ import DiscordIcon from "../../Icons/DiscordIcon";
 
 export const Footer: FC = () => {
   return (
-    <div className="bg-[url('/footerBg.jpg')] w-full items-center justify-center flex flex-wrap bottom-0">
+    <footer className="bg-[url('/footerBg.jpg')] w-full items-center justify-center flex flex-wrap bottom-0">
     <div className={"max-w-[1280px] w-full lg:py-[30px] py-10 px-5"}>
      <div className={"w-full flex lg:flex-row flex-col"}>
        <div>
@@ -57,7 +57,7 @@ export const Footer: FC = () => {
       </div>
     </div>
 
-    </div>
+    </footer>
   );
 };
 
