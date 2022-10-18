@@ -59,14 +59,15 @@ a {
 @media (max-width: 768px) {
   .cards img {
     width: 100%;
+    margin-top: 25px;
   }
 }
 
-@media (max-width: 1425px) {
+/* @media (max-width: 1425px) {
   .cards img {
     margin-top: 128px;
   }
-}
+} */
 
 .faq-title::after {
   content: "";
@@ -74,6 +75,16 @@ a {
     width: 144px;
     height: 6px;
     background-color: #010024;
+    margin: 10px 0 0;
+    border-radius: 138px;
+}
+
+.why-us-title::after {
+  content: "";
+    display: block;
+    width: 144px;
+    height: 6px;
+    background-color: white;
     margin: 10px 0 0;
     border-radius: 138px;
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FC, useState } from "react";
+import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
 
@@ -66,7 +67,7 @@ export const Header: FC = () => {
             : "hidden"
         }
       >
-        asd
+        <FooterLogoIcon/>
       </div>
       <div
         onClick={() => {
