@@ -10,9 +10,9 @@ interface Props {
 
 export const ShowPassword: FC<Props> = ({setShowPassword, showPassword}) => {
   return (
-    <div className={""}>
-      {showPassword ? <OpenEyeIcon onClick={() => setShowPassword(!showPassword)}/> :
-        <SlashedEyeIcon onClick={() => setShowPassword(!showPassword)}/>}
+    <div className={"absolute mr-5"}>
+      {showPassword ? <SlashedEyeIcon onClick={() => setShowPassword(!showPassword)}/> :
+        <OpenEyeIcon onClick={() => setShowPassword(!showPassword)}/>}
     </div>
   );
 }

@@ -38,7 +38,7 @@ export const TextBox: FC<Props> = ({
           htmlFor={name}>{label}</label>
         
         <input
-          className={classNames(`w-full border-none rounded-[7px] text-title text-storm-gray py-2.5 pl-5 pr-2.5 ${inputClass}`, {
+          className={classNames(`w-full border-none rounded-[7px] text-title text-storm-gray py-[15px] pl-5 pr-[15px] ${inputClass}`, {
             '': error
           })}
           autoComplete="off"

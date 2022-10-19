@@ -63,18 +63,12 @@ a {
   }
 }
 
-/* @media (max-width: 1425px) {
-  .cards img {
-    margin-top: 128px;
-  }
-} */
-
 .faq-title::after {
   content: "";
     display: block;
     width: 144px;
     height: 6px;
-    background-color: #010024;
+    background-color: var(--color-navy-blue);
     margin: 10px 0 0;
     border-radius: 138px;
 }
@@ -87,4 +81,24 @@ a {
     background-color: white;
     margin: 10px 0 0;
     border-radius: 138px;
+}
+
+.dotted-line::after {
+  content: "-------------";
+  letter-spacing: 5px;
+  font-size: 17px;
+  color: var(--color-storm-gray);
+  display: inline-block;
+  vertical-align: 3px;
+  padding-left: 13px;
+}
+
+.dotted-line::before {
+  content: "-------------";
+  letter-spacing: 5px;
+  font-size: 17px;
+  color: var(--color-storm-gray);
+  display: inline-block;
+  vertical-align: 3px;
+  padding-right: 13px;
 }

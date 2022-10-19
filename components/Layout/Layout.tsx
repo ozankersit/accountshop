@@ -16,8 +16,9 @@ export const Layout:FC<Props> = ({children}) => {
 
   return (
     <div>
+      {/* md:py-28 py-5 */}
         {!hideHeader && <Header/>}
-        <main className='overflow-hidden relative bg-concrete md:py-28 py-5'>{children}</main>
+        <main className='overflow-hidden relative bg-concrete'>{children}</main> 
          {!hideFooter && <Footer/>}
     </div>
   )
