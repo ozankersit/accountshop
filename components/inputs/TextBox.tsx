@@ -24,7 +24,6 @@ export const TextBox: FC<Props> = ({
                                      containerClass, type, labelClass = '', inputClass, disabled, icon, errorClass
                                    }) => {
   const [showPassword, setShowPassword] = useState(false)
-  const [showPasswordd, setShowPasswordd] = useState(false)
   return (
     <>
       {error && (

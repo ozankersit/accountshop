@@ -28,7 +28,7 @@ export const Header: FC = () => {
             How Can I Buy ?
           </span>
         </Link>
-        <Link href="/">
+        <Link href="#faq-page">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">
             FAQ
           </span>
@@ -44,7 +44,7 @@ export const Header: FC = () => {
               Sign in
             </span>
           </Link>
-          <Link href="/">
+          <Link href="/register">
             <button className="bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title">
               Sign Up
             </button>
@@ -54,7 +54,6 @@ export const Header: FC = () => {
       <button
         className="xl:hidden flex"
         onClick={() => {
-          console.log("click");
           setIsNavOpen(!isNavOpen);
         }}
       >
@@ -71,7 +70,6 @@ export const Header: FC = () => {
       </div>
       <div
         onClick={() => {
-          console.log("click");
           setIsNavOpen(!isNavOpen);
         }}
         className={

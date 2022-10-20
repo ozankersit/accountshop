@@ -11,8 +11,8 @@ export const Layout:FC<Props> = ({children}) => {
   const router = useRouter();
   const { pathname } = router;
 
-  const hideHeader = pathname.includes('/login');
-  const hideFooter = pathname.includes('/login');
+  const hideHeader = pathname.includes('/login') || pathname.includes('/register');
+  const hideFooter = pathname.includes('/login') || pathname.includes('/register');
 
   return (
     <div>
