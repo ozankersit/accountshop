@@ -103,3 +103,17 @@ a {
   vertical-align: 3px;
   padding-right: 13px;
 }
+
+@media (max-width: 768px) {
+  .sign-up-svg svg {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 490px) {
+  .sign-up-svg svg {
+    width: 348px;
+    height: 200px;
+  }
+}

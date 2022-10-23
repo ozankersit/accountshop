@@ -65,7 +65,7 @@ export const Register: FC = () => {
           showHideIcon={true}
           rule={{
             ...register("rePassword", {
-              required: "Password is required",
+              required: "Retry password is required",
               validate: (value) => {
                 if(watch('password') !== value) {
                     return ("Password does not match");

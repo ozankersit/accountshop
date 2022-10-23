@@ -23,7 +23,7 @@ export const Header: FC = () => {
             Unranked Accounts
           </span>
         </Link>
-        <Link href="/">
+        <Link href="/how-can-i-buy">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">
             How Can I Buy ?
           </span>
