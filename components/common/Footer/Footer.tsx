@@ -4,6 +4,7 @@ import MasterCardIcon from "../../Icons/MasterCardIcon";
 import VisaIcon from "../../Icons/VisaIcon";
 import InstagramIcon from "../../Icons/InstagramIcon";
 import DiscordIcon from "../../Icons/DiscordIcon";
+import Link from "next/link";
 
 export const Footer: FC = () => {
   return (
@@ -27,15 +28,25 @@ export const Footer: FC = () => {
          <p className="text-white text-title cursor-pointer">Games</p>
          <p className="text-white text-title cursor-pointer">Why Us ?</p>
          <p className="text-white text-title cursor-pointer">Customers</p>
+         <Link href="/#faq-page">
          <p className="text-white text-title cursor-pointer">FAQ</p>
+         </Link>
        </div>
        <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
          <p className="text-white text-title-bold mb-6">Pages</p>
+         <Link href="/">
          <p className="text-white text-title cursor-pointer">Home</p>
+         </Link>
+         <Link href="/login">
          <p className="text-white text-title cursor-pointer">Sign in</p>
-         <p className="text-white text-title cursor-pointer">Sign up</p>
+         </Link>
+         <Link href="/register">
+         <p className="text-white text-title cursor-pointer">Sign Up</p>
+         </Link>
          <p className="text-white text-title cursor-pointer">Unranked Accounts</p>
+         <Link href="/how-can-i-buy">
          <p className="text-white text-title cursor-pointer">How Can I Buy ?</p>
+         </Link>
          <p className="text-white text-title cursor-pointer">Account Sell</p>
        </div>
        <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
