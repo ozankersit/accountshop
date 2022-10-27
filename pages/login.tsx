@@ -24,7 +24,7 @@ export const Login: FC = () => {
         </div>
         <TextBox
           type={"email"}
-          placeholder={"Email"}
+          placeholder={"Email or Username"}
           containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
           // inputClass={"w-[500px]"}
           name="email"

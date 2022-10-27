@@ -99,6 +99,7 @@ module.exports = {
       'dark': '#0F0F0F',
       'storm-gray': '#666B84',
       'gray': '#AFB3C7',
+      'red': '#FF3737',
     },
   },
   plugins: [],

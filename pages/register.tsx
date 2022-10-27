@@ -26,7 +26,7 @@ export const Register: FC = () => {
         <TextBox
           type={"email"}
           placeholder={"Email"}
-          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
+          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px] md:mt-[15px] mt-2.5"}
           // inputClass={"w-[500px]"}
           name="email"
           error={errors?.email}
@@ -44,7 +44,7 @@ export const Register: FC = () => {
         <TextBox
           //   type={""} pw lerde type kullanmıyoruz
           placeholder={"Password"}
-          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px] sm:justify-end justify-start"}
+          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px] sm:justify-end justify-start md:mt-[15px] mt-2.5"}
           // inputClass={"w-[500px]"}
           name="password"
           error={errors?.password}
@@ -58,7 +58,7 @@ export const Register: FC = () => {
         <TextBox
           //   type={""} pw lerde type kullanmıyoruz
           placeholder={"Retry Password"}
-          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[30px] sm:justify-end justify-start"}
+          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[30px] sm:justify-end justify-start md:mt-[15px] mt-2.5"}
           // inputClass={"w-[500px]"}
           name="rePassword"
           error={errors?.rePassword}

@@ -27,7 +27,7 @@ export const TextBox: FC<Props> = ({
   return (
     <>
       {error && (
-        <span className={`${errorClass ? errorClass : ''}`}>
+        <span className={`${errorClass ? errorClass : 'text-red text-title'}`}>
         {error?.message}
         </span>
       )}
