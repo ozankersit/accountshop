@@ -28,7 +28,7 @@ export const Header: FC = () => {
             How Can I Buy ?
           </span>
         </Link>
-        <Link href="#faq-page">
+        <Link href="/#faq-page">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">
             FAQ
           </span>
