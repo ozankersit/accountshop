@@ -7,16 +7,33 @@ import GoogleIcon from "../components/Icons/GoogleIcon";
 import HeaderLogoIcon from "../components/common/Header/HeaderIcons/HeaderLogoIcon";
 import DiscordIcon from "../components/Icons/DiscordIcon";
 import InstagramIcon from "../components/Icons/InstagramIcon";
+import { Login as LoginModel } from "../models/AuthModels/login.model";
+import { loginGetToken, loginRefreshToken } from "../services/auth";
+import { LoginResponse } from "../models/AuthModels/response/login.response";
+import {AxiosResponse} from "axios";
+import login from "./api/authorization/login";
+import { useRouter } from "next/router";
 
 export const Login: FC = () => {
   const {
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm<any>();
+  } = useForm<LoginModel>();
+
+  const router = useRouter();
+
+  const onSubmit = async (data:LoginModel) => {
+    await loginGetToken(data).then(res => {
+      loginRefreshToken(res.data).then((res:AxiosResponse<LoginResponse>) => {
+      // login(res).then(() => getAccount().then(() => router.push("/")))
+      // login(res).then(()=> router.push("/"))
+      })
+    })
+  };
   return (
     <div className="bg-concrete flex flex-row md:justify-between justify-center items-center h-screen">
-      <form onSubmit={handleSubmit()} className="mr-auto ml-auto sm:block flex flex-col items-center">
+      <form onSubmit={handleSubmit(onSubmit)} className="mr-auto ml-auto sm:block flex flex-col items-center">
         <div className="mb-[50px]">
           <Link href={"/"}>
           <HeaderLogoIcon />
@@ -27,10 +44,10 @@ export const Login: FC = () => {
           placeholder={"Email or Username"}
           containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
           // inputClass={"w-[500px]"}
-          name="email"
-          error={errors?.email}
+          name="username"
+          error={errors?.username}
           rule={{
-            ...register("email", {
+            ...register("username", {
               required: "E-mail is required",
               pattern: {
                 value:
