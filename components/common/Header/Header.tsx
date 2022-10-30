@@ -18,9 +18,9 @@ export const Header: FC = () => {
             Home
           </span>
         </Link>
-        <Link href="/">
+        <Link href="/accounts">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            Unranked Accounts
+            Accounts
           </span>
         </Link>
         <Link href="/how-can-i-buy">

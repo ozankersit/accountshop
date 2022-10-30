@@ -100,6 +100,7 @@ module.exports = {
       'storm-gray': '#666B84',
       'gray': '#AFB3C7',
       'red': '#FF3737',
+      'light-gray': "#E8E8E8",
     },
   },
   plugins: [],

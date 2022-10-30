@@ -8,7 +8,7 @@ import { GetUserModel } from "../../models/AuthModels/get-user.model";
 
 
 export const loginGetToken = async (data: Login): Promise<AxiosResponse<LoginResponse>> => {
-    return httpService.post<LoginResponse>(INTERNAL_API_URL + `auth/login`, data)
+    return httpService.post<LoginResponse>(INTERNAL_API_URL + `/auth/login`, data)
 }
 
 export const loginRefreshToken = async (data:LoginResponse): Promise<AxiosResponse<LoginResponse>> => {

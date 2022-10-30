@@ -1,5 +1,4 @@
 import {FC, useState} from 'react';
-import CloseIcon from './Icons/CloseIcon';
 import PlusIcon from './Icons/PlusIcon';
 
 interface Props {
