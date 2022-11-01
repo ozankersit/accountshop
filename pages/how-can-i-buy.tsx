@@ -10,7 +10,7 @@ import SignUpIcon from "../components/Icons/SignUpIcon";
 const HowCanIBuy = () => {
   return (
     <>
-      <div>
+      <div className="md:mt-[157px] mt-[50px]">
         <div className="flex flex-row justify-center items-center flex-wrap md:mb-[125px] mb-[40px]">
           <div className="flex flex-col">
             <div className="md:ml-0 ml-5">

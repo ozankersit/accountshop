@@ -216,7 +216,7 @@ const ConfirmationIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
         x2="613"
         y2="490.5"
         stroke="#666B84"
-        stroke-dasharray="10 10"
+        strokeDasharray="10 10"
       />
       <defs>
         <pattern
