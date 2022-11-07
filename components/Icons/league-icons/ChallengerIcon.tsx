@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ChallIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
+export const ChallengerIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="16"
@@ -32,4 +32,4 @@ export const ChallIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   );
 };
 
-export default ChallIcon;
+export default ChallengerIcon;

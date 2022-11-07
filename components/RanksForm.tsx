@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-import BronzeIcon from "./Icons/LeagueIcons/BronzeIcon";
-import ChallIcon from "./Icons/LeagueIcons/ChallIcon";
-import DiamondIcon from "./Icons/LeagueIcons/DiamondIcon";
-import GoldIcon from "./Icons/LeagueIcons/GoldIcon";
-import IronIcon from "./Icons/LeagueIcons/IronIcon";
-import MasterIcon from "./Icons/LeagueIcons/MasterIcon";
-import PlatIcon from "./Icons/LeagueIcons/PlatIcon";
-import SilverIcon from "./Icons/LeagueIcons/SilverIcon";
-import UnrankedIcon from "./Icons/LeagueIcons/UnrankedIcon";
+import BronzeIcon from "./Icons/league-icons/BronzeIcon";
+import ChallengerIcon from "./Icons/league-icons/ChallengerIcon";
+import DiamondIcon from "./Icons/league-icons/DiamondIcon";
+import GoldIcon from "./Icons/league-icons/GoldIcon";
+import IronIcon from "./Icons/league-icons/IronIcon";
+import MasterIcon from "./Icons/league-icons/MasterIcon";
+import PlatIcon from "./Icons/league-icons/PlatIcon";
+import SilverIcon from "./Icons/league-icons/SilverIcon";
+import UnrankedIcon from "./Icons/league-icons/UnrankedIcon";
 import TrophyIcon from "./Icons/TrophyIcon";
 import CheckBox from "./inputs/CheckBox";
 
@@ -25,7 +25,7 @@ export const RanksForm: FC = () => {
                   label="Unranked"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#6B6963]"
                 >
                   <UnrankedIcon />
                 </CheckBox>
@@ -34,7 +34,7 @@ export const RanksForm: FC = () => {
                   label="Iron"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#51484A]"
                 >
                   <IronIcon />
                 </CheckBox>
@@ -43,7 +43,7 @@ export const RanksForm: FC = () => {
                   label="Bronz"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#8C513A]"
                 >
                   <BronzeIcon />
                 </CheckBox>
@@ -52,7 +52,7 @@ export const RanksForm: FC = () => {
                   label="Silver"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#80989D]"
                 >
                   <SilverIcon />
                 </CheckBox>
@@ -61,7 +61,7 @@ export const RanksForm: FC = () => {
                   label="Gold"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#CD8837]"
                 >
                   <GoldIcon />
                 </CheckBox>
@@ -70,7 +70,7 @@ export const RanksForm: FC = () => {
                   label="Plat"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#4E9996]"
                 >
                   <PlatIcon />
                 </CheckBox>
@@ -79,7 +79,7 @@ export const RanksForm: FC = () => {
                   label="Diamond"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#576BCE]"
                 >
                   <DiamondIcon />
                 </CheckBox>
@@ -88,7 +88,7 @@ export const RanksForm: FC = () => {
                   label="Master"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#9D48E0]"
                 >
                   <MasterIcon />
                 </CheckBox>
@@ -97,7 +97,7 @@ export const RanksForm: FC = () => {
                   label="Grandmaster"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#CD4545] checked:bg-[#CD4545]"
                 >
                   <MasterIcon />
                 </CheckBox>
@@ -106,9 +106,9 @@ export const RanksForm: FC = () => {
                   label="Challenger"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="mr-[5px]"
+                  inputClass="!border-[#F4C874] checked:bg-[#F4C874] hover:bg-[#F4C874]"
                 >
-                  <ChallIcon />
+                  <ChallengerIcon />
                 </CheckBox>
     </>
   );

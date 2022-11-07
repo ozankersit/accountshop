@@ -103,5 +103,7 @@ module.exports = {
       'light-gray': "#E8E8E8",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

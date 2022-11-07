@@ -24,7 +24,7 @@ export const CheckBox: FC<Props> = ({
 
   return (
     <label className={`flex ml-5 mb-[5px] ${isActive ? "!text-dark" : "!text-storm-gray"} ${labelClass}`} htmlFor={name}>
-      <input type="checkbox" className={`${inputClass}`} {...rule} onClick={() => setIsActive(!isActive)} />
+      <input type="checkbox" className={`${inputClass} rounded-[4px] mr-[5px] border-[0.5px] border-primary`} {...rule} onClick={() => setIsActive(!isActive)} />
       {children}
       <div className={`${textClass}`}>{label}</div>
     </label>

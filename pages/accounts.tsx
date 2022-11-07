@@ -13,7 +13,7 @@ export const Accounts: FC = () => {
   const { register } = useForm();
   return (
     <>
-      <div className="flex justify-center items-center mt-[50px]">
+      <div className="flex justify-center mt-[50px]">
         <div className="flex flex-col bg-white rounded-[7px] w-[341px] mb-[50px]">
           <div className="text-navy-blue text-title pb-[15px] pl-[25px] pt-[25px]">
             Filter
@@ -111,6 +111,13 @@ export const Accounts: FC = () => {
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+        <div className="flex flex-row bg-white ml-2.5 rounded-[7px] px-5 py-4">
+          <div>100 Account Found</div>
+          <div className="flex">
+            <div>asd</div>
+            <div>asd</div>
           </div>
         </div>
       </div>

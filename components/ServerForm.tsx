@@ -16,61 +16,61 @@ export const ServerForm: FC = () => {
                   name="naServer"
                   label="North America"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="euServer"
                   label="Europe West"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="euneServer"
                   label="Europe Nordic East"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="oceServer"
                   label="Oceania"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="ruServer"
                   label="Russia"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="trServer"
                   label="Turkey"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="lanServer"
                   label="Latin America North"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="lasServer"
                   label="Latin American South"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="brServer"
                   label="Brazil"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
                 <CheckBox
                   name="japServer"
                   label="Japan"
                   labelClass="text-normal"
-                  inputClass="mr-[5px]"
+                  inputClass=""
                 />
     </>
   );
