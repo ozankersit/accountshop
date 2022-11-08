@@ -35,7 +35,7 @@ export const Accounts: FC = () => {
                   placeholder={"Number of Champion"}
                   containerClass={"ml-5"}
                   inputClass={
-                    "bg-concrete !w-[80%] !text-normal !py-2.5 !pl-2.5"
+                    "bg-concrete !w-[92%] !text-normal !py-2.5 !pl-2.5"
                   }
                   name="numberOfChampion"
                   rule={{
@@ -53,7 +53,7 @@ export const Accounts: FC = () => {
                   placeholder={"Number of Skin"}
                   containerClass={"ml-5"}
                   inputClass={
-                    "bg-concrete !w-[80%] !text-normal !py-2.5 !pl-2.5"
+                    "bg-concrete !w-[92%] !text-normal !py-2.5 !pl-2.5"
                   }
                   name="numberOfSkin"
                   rule={{
@@ -73,7 +73,7 @@ export const Accounts: FC = () => {
                       name={"minPrice"}
                       type={"number"}
                       containerClass="mr-[6px]"
-                      inputClass="!border !border-solid !border-gray !p-2.5 !text-normal"
+                      inputClass="!border !border-solid border-gray !p-2.5 !text-normal focus:outline-none focus:border-[#3158FF] focus:ring-1 focus:ring-[#3158FF]"
                       rule={{
                         ...register("minPrice"),
                       }}
@@ -82,7 +82,7 @@ export const Accounts: FC = () => {
                       placeholder={"Max Price"}
                       name={"maxPrice"}
                       type={"number"}
-                      inputClass="!border !border-solid !border-gray !p-2.5 !text-normal"
+                      inputClass="!border !border-solid border-gray !p-2.5 !text-normal focus:outline-none focus:border-[#3158FF] focus:ring-1 focus:ring-[#3158FF] invalid:text-navy-blue"
                       rule={{
                         ...register("maxPrice"),
                       }}
@@ -111,13 +111,6 @@ export const Accounts: FC = () => {
                 </div>
               </div>
             </form>
-          </div>
-        </div>
-        <div className="flex flex-row bg-white ml-2.5 rounded-[7px] px-5 py-4">
-          <div>100 Account Found</div>
-          <div className="flex">
-            <div>asd</div>
-            <div>asd</div>
           </div>
         </div>
       </div>

@@ -17,60 +17,70 @@ export const ServerForm: FC = () => {
                   label="North America"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="euServer"
                   label="Europe West"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="euneServer"
                   label="Europe Nordic East"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="oceServer"
                   label="Oceania"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="ruServer"
                   label="Russia"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="trServer"
                   label="Turkey"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="lanServer"
                   label="Latin America North"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="lasServer"
-                  label="Latin American South"
+                  label="Latin America South"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="brServer"
                   label="Brazil"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
                 <CheckBox
                   name="japServer"
                   label="Japan"
                   labelClass="text-normal"
                   inputClass=""
+                  filter
                 />
     </>
   );

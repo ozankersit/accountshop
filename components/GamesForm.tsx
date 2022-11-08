@@ -14,13 +14,15 @@ export const GamesForm: FC = () => {
         label="League of Legends"
         labelClass="text-normal"
         inputClass=""
-        textClass="cursor-pointer"
+        textClass=""
+        filter
       />
       <CheckBox
         name="valoFilter"
         label="Valorant"
         labelClass="text-normal"
         inputClass=""
+        filter
       />
     </>
   );

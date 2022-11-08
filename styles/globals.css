@@ -124,3 +124,72 @@ a {
     height: 171px;
   }
 }
+
+/*Styled checkbox*/
+
+.filter-inputs input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  transform: translateY(1px);
+  display: grid;
+  place-content: center;
+}
+
+.filter-inputs input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 10px;
+}
+
+.filter-inputs input[type="checkbox"]:checked::before {
+  background-color: white;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.filter-inputs input[type="checkbox"]:checked {
+  background-color: #0038FF;
+}
+
+.unranked-inputs input[type="checkbox"]:checked {
+  background-color: #6B6963;
+}
+
+.iron-inputs input[type="checkbox"]:checked {
+  background-color: #51484A;
+}
+
+.bronz-inputs input[type="checkbox"]:checked {
+  background-color: #8C513A;
+}
+
+.silver-inputs input[type="checkbox"]:checked {
+  background-color: #80989D;
+}
+
+.gold-inputs input[type="checkbox"]:checked {
+  background-color: #CD8837;
+}
+
+.plat-inputs input[type="checkbox"]:checked {
+  background-color: #4E9996;
+}
+
+.diamond-inputs input[type="checkbox"]:checked {
+  background-color: #576BCE;
+}
+
+.master-inputs input[type="checkbox"]:checked {
+  background-color: #9D48E0;
+}
+
+.grand-master-inputs input[type="checkbox"]:checked {
+  background-color: #CD4545;
+}
+
+.challenger-inputs input[type="checkbox"]:checked {
+  background-color: #F4C874;
+}
