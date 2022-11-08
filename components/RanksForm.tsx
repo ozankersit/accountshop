@@ -106,7 +106,7 @@ export const RanksForm: FC = () => {
                   label="Challenger"
                   labelClass="text-normal"
                   textClass="ml-[5px]"
-                  inputClass="!border-[#F4C874] checked:bg-[#F4C874] hover:bg-[#F4C874]"
+                  inputClass="!border-[#F4C874] checked:bg-[#F4C874]"
                 >
                   <ChallengerIcon />
                 </CheckBox>
