@@ -12,6 +12,14 @@ module.exports = {
       'sans': ['Inter', ...defaultTheme.fontFamily.sans],
     },
     fontSize: {
+      'small': ['0.75rem', { //12px
+        lineHeight: '1rem',
+        fontWeight: '400',
+      }],
+      'small-bold': ['0.75rem', { //12px
+        lineHeight: '0,9075rem',
+        fontWeight: '700',
+      }],
       'normal': ['1rem', { //16px
         lineHeight: '1.188rem',
         fontWeight: '400',

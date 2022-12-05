@@ -24,7 +24,7 @@ export const RegisterForm: FC = () => {
         </Link>
       </div>
       <TextBox
-        type={"email"}
+        type={"text"}
         placeholder={"Email"}
         containerClass={
           "sm:w-[500px] w-[300px] flex items-center mb-[15px] md:mt-[15px] mt-2.5"

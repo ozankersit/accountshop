@@ -36,7 +36,7 @@ export const LoginForm:FC = () => {
           </Link>
         </div>
         <TextBox
-          type={"email"}
+          type={"text"}
           placeholder={"Email or Username"}
           containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
           // inputClass={"w-[500px]"}
@@ -54,7 +54,6 @@ export const LoginForm:FC = () => {
           }}
         />
         <TextBox
-          //   type={""} pw lerde type kullanmıyoruz
           placeholder={"Password"}
           containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[30px] sm:justify-end justify-start"}
           // inputClass={"w-[500px]"}
@@ -76,7 +75,7 @@ export const LoginForm:FC = () => {
         >
           Log in
         </Button>
-        <Link href={"/"}>
+        <Link href={"/recovery"}>
           <div className="text-center text-normal mt-[15px] cursor-pointer underline underline-offset-4	">
             Forgot Password
           </div>
