@@ -5,7 +5,7 @@ interface Props {
     className: string;
 }
 
-export const LeftContent:FC<Props> = ({
+export const RightContent:FC<Props> = ({
     children,
     className=''
 }) => {
@@ -19,4 +19,4 @@ export const LeftContent:FC<Props> = ({
   )
 }
 
-export default LeftContent
+export default RightContent

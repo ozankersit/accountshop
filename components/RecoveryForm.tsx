@@ -30,7 +30,6 @@ const RecoveryForm: FC = () => {
           containerClass={
             "sm:w-[500px] w-[300px] flex items-center md:mb-[30px] mb-[15px] md:mt-[15px] mt-2.5"
           }
-          // inputClass={"w-[500px]"}
           name="email"
           error={errors?.email}
           rule={{

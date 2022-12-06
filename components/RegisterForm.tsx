@@ -29,7 +29,6 @@ export const RegisterForm: FC = () => {
         containerClass={
           "sm:w-[500px] w-[300px] flex items-center mb-[15px] md:mt-[15px] mt-2.5"
         }
-        // inputClass={"w-[500px]"}
         name="email"
         error={errors?.email}
         rule={{
@@ -44,12 +43,10 @@ export const RegisterForm: FC = () => {
         }}
       />
       <TextBox
-        //   type={""} pw lerde type kullanmıyoruz
         placeholder={"Password"}
         containerClass={
-          "sm:w-[500px] w-[300px] flex items-center mb-[15px] sm:justify-end justify-start md:mt-[15px] mt-2.5"
+          "sm:w-[500px] w-[300px] flex items-center mb-[15px] justify-end md:mt-[15px] mt-2.5"
         }
-        // inputClass={"w-[500px]"}
         name="password"
         error={errors?.password}
         showHideIcon={true}
@@ -60,12 +57,10 @@ export const RegisterForm: FC = () => {
         }}
       />
       <TextBox
-        //   type={""} pw lerde type kullanmıyoruz
         placeholder={"Retry Password"}
         containerClass={
-          "sm:w-[500px] w-[300px] flex items-center mb-[30px] sm:justify-end justify-start md:mt-[15px] mt-2.5"
+          "sm:w-[500px] w-[300px] flex items-center mb-[30px] justify-end md:mt-[15px] mt-2.5"
         }
-        // inputClass={"w-[500px]"}
         name="rePassword"
         error={errors?.rePassword}
         showHideIcon={true}
@@ -83,7 +78,6 @@ export const RegisterForm: FC = () => {
       <Button
         type="submit"
         color="#0038FF"
-        // width="500px"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
       >

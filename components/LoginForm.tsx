@@ -39,7 +39,6 @@ export const LoginForm:FC = () => {
           type={"text"}
           placeholder={"Email or Username"}
           containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
-          // inputClass={"w-[500px]"}
           name="username"
           error={errors?.username}
           rule={{
@@ -55,8 +54,7 @@ export const LoginForm:FC = () => {
         />
         <TextBox
           placeholder={"Password"}
-          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[30px] sm:justify-end justify-start"}
-          // inputClass={"w-[500px]"}
+          containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[30px] justify-end"}
           name="password"
           error={errors?.password}
           showHideIcon={true}
@@ -69,7 +67,6 @@ export const LoginForm:FC = () => {
         <Button
           type="submit"
           color="#0038FF"
-          // width="500px"
           radius="7px"
           className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
         >
