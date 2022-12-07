@@ -193,3 +193,13 @@ a {
 .challenger-inputs input[type="checkbox"]:checked {
   background-color: #F4C874;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #AFB3C780;
+  z-index: 99;
+}

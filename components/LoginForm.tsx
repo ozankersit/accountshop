@@ -32,7 +32,9 @@ export const LoginForm:FC = () => {
     <form onSubmit={handleSubmit(onSubmit)} className="mr-auto ml-auto sm:block flex flex-col items-center">
         <div className="mb-[50px]">
           <Link href={"/"}>
+            <a>
           <HeaderLogoIcon />
+            </a>
           </Link>
         </div>
         <TextBox

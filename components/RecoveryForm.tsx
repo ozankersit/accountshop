@@ -1,24 +1,47 @@
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "./Button";
 import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
 import TextBox from "./inputs/TextBox";
-import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/router";
+import Modal from 'react-modal';
+import CheckIcon from "./Icons/CheckIcon";
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    borderRadius: '7px',
+    width: '30%',
+    height:'275px',
+    border: 'none',
+    z: '99',
+    overflow: 'auto',
+    padding: '',
+    display: 'flex',
+    justifyContent:'center',
+    alignItems:'center',
+  },
+}
 
 const RecoveryForm: FC = () => {
+  const router = useRouter();
   const {
     formState: { errors },
     handleSubmit,
     register,
   } = useForm();
-  const notify = () => toast("Wow so easy!");
+  const [showModal,setShowModal] = useState(false)
   return (
     <>
-      <form className="mr-auto ml-auto sm:block flex flex-col items-center">
+      <form onSubmit={handleSubmit()} className="mr-auto ml-auto sm:block flex flex-col items-center">
         <div className="md:mb-[30px] mb-5">
           <Link href={"/"}>
+            <a>
             <HeaderLogoIcon />
+            </a>
           </Link>
         </div>
         <div className="sm:max-w-[515px] max-w-[315px] text-storm-gray sm:text-title text-small">
@@ -43,12 +66,24 @@ const RecoveryForm: FC = () => {
             }),
           }}
         />
+        <Modal
+        isOpen={showModal}
+        onRequestClose={() => setShowModal(false)}
+        style={customStyles}
+        overlayClassName="modal-overlay"
+        >
+          <div className="flex flex-col justify-center items-center">
+            <CheckIcon/>
+            <span className="text-dark text-title">Check Your Email</span>
+          </div>
+        </Modal>
         <Button
         type="submit"
         color="#0038FF"
+        onClick={() => setShowModal(true)}
         radius="7px"
         >
-            <div className="text-white py-2.5 pl-5 pr-2.5 sm:w-[500px] w-[300px]">Send</div>
+            <div className="text-white py-2.5 pl-5 pr-2.5 sm:w-[500px] w-[300px] transition-all">Send</div>
         </Button>
       </form>
     </>
