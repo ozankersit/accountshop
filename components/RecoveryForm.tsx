@@ -68,7 +68,7 @@ const RecoveryForm: FC = () => {
         />
         <Modal
         isOpen={showModal}
-        onRequestClose={() => setShowModal(false)}
+        onRequestClose={() => {setShowModal(false); router.push("/login")}}
         style={customStyles}
         overlayClassName="modal-overlay"
         >

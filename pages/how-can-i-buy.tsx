@@ -107,7 +107,7 @@ const HowCanIBuy = () => {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate"
             </p>
-            <div className="confirmation-phase md:hidden block mt-5 ml-5 mr-5">
+            <div className="confirmation-phase md:hidden block mt-5 ml-5 mr-5 flex justify-center">
               <BuyPhaseIcon />
             </div>
           </div>
@@ -127,18 +127,18 @@ const HowCanIBuy = () => {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate"
             </p>
-            <div className="confirmation-phase mt-5 ml-5 mr-5">
+            <div className="confirmation-phase mt-5 ml-5 mr-5 flex justify-center">
               <ConfirmationIcon />
             </div>
           </div>
         </div>
         <div className="flex flex-row justify-center items-center flex-wrap md:mb-[125px] mb-[40px]">
         <div className="flex flex-col bg-[url('/ahriBg.png')] bg-no-repeat md:w-[1307px] w-[300px] h-[355px] bg-center">
-          <div className="mt-[68px] ml-[58px]">
+          <div className="mt-10 ml-10">
             <div className="text-white text-3xl-bold pb-5">Now if everything is okay</div>
             <div className="text-white text-head">It's time to take a look at the accounts.</div>
           </div>
-          <Button height="60px" width="300px" radius="7px" color="#0038FF" className="text-white text-title-bold ml-[58px] mt-[40px]">Browse Account</Button>
+          <Button height="60px" width="248px" radius="7px" color="#0038FF" className="text-white text-title-bold ml-10 mt-10">Browse Account</Button>
         </div>
         </div>
       </div>
