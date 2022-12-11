@@ -16,10 +16,10 @@ axiosRetry(httpService,
     retryCondition: (error) => {
       console.error(`Retry API Error ${error.code} ${error.message}`,
         {
-          url: error.config.url,
-          method: error.config.method,
-          headers: error.config.headers,
-          timeout: error.config.timeout
+          url: error?.config?.url,
+          method: error?.config?.method,
+          headers: error?.config?.headers,
+          timeout: error?.config?.timeout
         } as AxiosRequestConfig)
       return true
     }
