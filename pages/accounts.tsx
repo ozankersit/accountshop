@@ -101,7 +101,7 @@ export const Accounts: FC = () => {
                 </div>
                 <div className="mr-auto ml-auto mb-[26px]">
                   <Button
-                    type="submit"
+                    type="reset"
                     color="#ffffff"
                     radius="7px"
                     className="text-normal text-black p-2.5 w-[289px]"

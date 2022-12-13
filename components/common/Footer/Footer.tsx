@@ -57,12 +57,12 @@ export const Footer: FC = () => {
      </div>
       <div className={"w-full border border-white lg:mt-[50px] lg:mb-[30px] mt-5 mb-5"}/>
       <div className={"w-full flex items-center"}>
-      <div className={"flex gap-5"}>
-        <MasterCardIcon/>
+      <div className={"flex"}>
+        <MasterCardIcon className="mr-5"/>
         <VisaIcon/>
       </div>
-        <div className={"ml-auto flex gap-5"}>
-          <InstagramIcon/>
+        <div className={"ml-auto flex"}>
+          <InstagramIcon className="mr-5"/>
           <DiscordIcon/>
         </div>
       </div>
