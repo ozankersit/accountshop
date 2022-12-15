@@ -9,11 +9,7 @@ export const Header: FC = () => {
 
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
-      <Link href="/">
-        <a>
         <HeaderLogoIcon />
-        </a>
-      </Link>
       <div className="xl:flex hidden justify-center items-center pt-2.5 gap-[50px]">
         <Link href="/">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">

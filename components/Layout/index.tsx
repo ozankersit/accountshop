@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import {FC, ReactNode} from 'react'
-import Footer from '../common/Footer/Footer'
-import Header from '../common/Header/Header'
+import Footer from '../common/Footer'
+import Header from '../common/Header'
 
 interface Props {
     children?:ReactNode,

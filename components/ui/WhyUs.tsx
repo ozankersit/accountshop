@@ -3,11 +3,11 @@ import React, { FC } from "react";
 export const WhyUs: FC = () => {
   return (
     <>
-      <div className="flex flex-col justify-center items-center w-full bg-primary md:mt-[150px] mt-[70px] overflow-x-auto scroll-center snap-x">
+      <div className="flex flex-col justify-center items-center w-full bg-primary md:mt-[150px] mt-[70px]">
         <div className="text-white text-head-bold why-us-title mt-[63px] mb-[35px]">
           Why Us?
         </div>
-        <div className="flex flex-row mb-[100px] w-full md:justify-center">
+        <div className="flex flex-row mb-[100px] w-full md:justify-center overflow-x-auto scroll-center snap-x">
           <div className="md:h-[317px] h-auto w-[317px] bg-light-blue rounded-[7px] mx-5">
             <p className="text-white text-head-bold max-w-[230px] md:ml-[42px] ml-5 mt-[30px] md:mr-auto mr-24">
               Instant Delivery
