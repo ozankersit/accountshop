@@ -1,6 +1,7 @@
-import React, {FC, useState} from "react";
+import React, { FC, useState } from "react";
 import classNames from "classnames";
 import ShowPassword from "../ShowPassword";
+import SearchIcon from "../Icons/SearchIcon";
 
 
 interface Props {
@@ -17,11 +18,13 @@ interface Props {
   errorClass?: string,
   type?: string,
   disabled?: boolean,
+  children?: React.ReactNode;
+  showSearchIcon?: boolean,
 }
 
 export const TextBox: FC<Props> = ({
                                      error, name, label, placeholder, rule, showHideIcon = false,
-                                     containerClass, type, labelClass = '', inputClass, disabled, icon, errorClass
+                                     containerClass, type, labelClass = '', inputClass, disabled, icon, errorClass,showSearchIcon
                                    }) => {
   const [showPassword, setShowPassword] = useState(false)
   return (
@@ -50,6 +53,7 @@ export const TextBox: FC<Props> = ({
         />
         <>
           {showHideIcon && <ShowPassword showPassword={showPassword} setShowPassword={setShowPassword}/>}
+          {showSearchIcon && <SearchIcon/>}
           {icon && icon}
         </>
       </div>

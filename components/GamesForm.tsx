@@ -16,6 +16,7 @@ export const GamesForm: FC = () => {
         inputClass=""
         textClass=""
         filter
+        id="lolFilter"
       />
       <CheckBox
         name="valoFilter"
@@ -23,6 +24,7 @@ export const GamesForm: FC = () => {
         labelClass="text-normal"
         inputClass=""
         filter
+        id="valoFilter"
       />
     </>
   );

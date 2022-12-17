@@ -27,6 +27,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#6B6963]"
                   filter
+                  id="unranked"
                 >
                   <UnrankedIcon />
                 </CheckBox>
@@ -37,6 +38,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#51484A]"
                   filter
+                  id="iron"
                 >
                   <IronIcon />
                 </CheckBox>
@@ -47,6 +49,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#8C513A]"
                   filter
+                  id="bronz"
                 >
                   <BronzeIcon />
                 </CheckBox>
@@ -57,6 +60,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#80989D]"
                   filter
+                  id="silver"
                 >
                   <SilverIcon />
                 </CheckBox>
@@ -67,6 +71,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#CD8837]"
                   filter
+                  id="gold"
                 >
                   <GoldIcon />
                 </CheckBox>
@@ -77,6 +82,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#4E9996]"
                   filter
+                  id="plat"
                 >
                   <PlatIcon />
                 </CheckBox>
@@ -87,6 +93,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#576BCE]"
                   filter
+                  id="diamond"
                 >
                   <DiamondIcon />
                 </CheckBox>
@@ -97,6 +104,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#9D48E0]"
                   filter
+                  id="master"
                 >
                   <MasterIcon />
                 </CheckBox>
@@ -107,6 +115,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#CD4545] checked:bg-[#CD4545]"
                   filter
+                  id="grandmaster"
                 >
                   <MasterIcon />
                 </CheckBox>
@@ -117,6 +126,7 @@ export const RanksForm: FC = () => {
                   textClass="ml-[5px]"
                   inputClass="!border-[#F4C874] checked:bg-[#F4C874]"
                   filter
+                  id="challenger"
                 >
                   <ChallengerIcon />
                 </CheckBox>

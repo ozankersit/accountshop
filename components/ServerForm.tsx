@@ -18,6 +18,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="naServer"
                 />
                 <CheckBox
                   name="euServer"
@@ -25,6 +26,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="euServer"
                 />
                 <CheckBox
                   name="euneServer"
@@ -32,6 +34,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="euneServer"
                 />
                 <CheckBox
                   name="oceServer"
@@ -39,6 +42,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="oceServer"
                 />
                 <CheckBox
                   name="ruServer"
@@ -46,6 +50,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="ruServer"
                 />
                 <CheckBox
                   name="trServer"
@@ -53,6 +58,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="trServer"
                 />
                 <CheckBox
                   name="lanServer"
@@ -60,6 +66,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="lanServer"
                 />
                 <CheckBox
                   name="lasServer"
@@ -67,6 +74,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="lasServer"
                 />
                 <CheckBox
                   name="brServer"
@@ -74,6 +82,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="brServer"
                 />
                 <CheckBox
                   name="japServer"
@@ -81,6 +90,7 @@ export const ServerForm: FC = () => {
                   labelClass="text-normal"
                   inputClass=""
                   filter
+                  id="japServer"
                 />
     </>
   );
