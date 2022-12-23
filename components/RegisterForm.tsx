@@ -1,10 +1,17 @@
 import Link from "next/link";
-import React, { FC } from "react";
-import { useForm } from "react-hook-form";
+import React, { FC, useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+import useAuth from "../hooks/useAuth";
 import Button from "./Button";
 import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
 import GoogleIcon from "./Icons/GoogleIcon";
 import TextBox from "./inputs/TextBox";
+
+interface Inputs {
+  email: string;
+  password: string;
+  username: string;
+}
 
 export const RegisterForm: FC = () => {
   const {
@@ -14,9 +21,13 @@ export const RegisterForm: FC = () => {
     watch,
   } = useForm<any>();
 
-  const onSubmit = (data:any) => {
-    console.log(data)
-  }
+  const [login, setLogin] = useState(true)
+  const { signUp } = useAuth()
+
+
+  const onSubmit: SubmitHandler<Inputs> = async({email,password}) => {
+    await signUp(email, password)
+  };
 
   return (
     <form
@@ -87,6 +98,7 @@ export const RegisterForm: FC = () => {
         color="#0038FF"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
+        onClick={() => setLogin(!setLogin)}
       >
         Create Account
       </Button>

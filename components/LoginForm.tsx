@@ -1,4 +1,4 @@
-import React, { FC,useState } from "react";
+import React, { FC, useState } from "react";
 import Link from "next/link";
 import GoogleIcon from "./Icons/GoogleIcon";
 import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
@@ -14,8 +14,8 @@ interface Inputs {
 }
 
 export const LoginForm: FC = () => {
-  const [login, setLogin] = useState(false)
-  const { signIn, signUp } = useAuth()
+  const [login, setLogin] = useState(false);
+  const { signIn } = useAuth();
 
   const {
     formState: { errors },
@@ -23,13 +23,8 @@ export const LoginForm: FC = () => {
     register,
   } = useForm<Inputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = async({email,password}) => {
-    if(login) {
-      await signIn(email, password)
-    }
-    else {
-      await signUp(email, password)
-    }
+  const onSubmit: SubmitHandler<Inputs> = async ({ email, password }) => {
+    await signIn(email, password);
   };
 
   return (
