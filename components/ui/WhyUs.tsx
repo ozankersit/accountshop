@@ -8,7 +8,7 @@ export const WhyUs: FC = () => {
           Why Us?
         </div>
         <div className="flex flex-row mb-[100px] w-full md:justify-center overflow-x-auto scroll-center snap-x">
-          <div className="md:h-[317px] h-auto w-[317px] bg-light-blue rounded-[7px] mx-5">
+          <div className="md:h-[350px] h-auto w-[317px] bg-light-blue rounded-[7px] mx-5">
             <p className="text-white text-head-bold max-w-[230px] md:ml-[42px] ml-5 mt-[30px] md:mr-auto mr-24">
               Instant Delivery
             </p>
@@ -18,7 +18,7 @@ export const WhyUs: FC = () => {
               panel.
             </p>
           </div>
-          <div className="md:h-[317px] h-auto w-[317px] bg-light-blue rounded-[7px] mr-5">
+          <div className="md:h-[350px] h-auto w-[317px] bg-light-blue rounded-[7px] mr-5">
             <p className="text-white text-head-bold max-w-[230px] md:ml-[42px] ml-5 mt-[30px] md:mr-auto mr-24">
               Costume Selection
             </p>
@@ -28,7 +28,7 @@ export const WhyUs: FC = () => {
               the account you want.
             </p>
           </div>
-          <div className="md:h-[317px] h-auto w-[317px] bg-light-blue rounded-[7px] mr-5">
+          <div className="md:h-[350px] h-auto w-[317px] bg-light-blue rounded-[7px] mr-5">
             <p className="text-white text-head-bold max-w-[230px] md:ml-[42px] ml-5 mt-[30px] md:mr-auto mr-24">
               Without Ban Risk
             </p>
@@ -36,7 +36,7 @@ export const WhyUs: FC = () => {
               Feel free to climb to the top leagues with accounts with high KDA.
             </p>
           </div>
-          <div className="md:h-[317px] h-auto w-[317px] bg-light-blue rounded-[7px]">
+          <div className="md:h-[350px] h-auto w-[317px] bg-light-blue rounded-[7px] mr-5">
             <p className="text-white text-head-bold max-w-[230px] md:ml-[42px] ml-5 mt-[30px] md:mr-auto mr-24">
               League Opportunity
             </p>

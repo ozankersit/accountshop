@@ -15,7 +15,7 @@ export const FilterSection: FC = () => {
   const [isActive, setIsActive] = useState(false);
   return (
     <>
-      <div className="flex flex-col bg-white rounded-[7px] w-[341px] mb-[50px]">
+      <div className="flex flex-col bg-white rounded-[7px] md:w-[341px] w-[300px] mb-[50px]">
         <div className="flex justify-between text-navy-blue text-title pb-[15px] pl-[25px] pt-[25px]">
           <span>Filter</span>
           <div
@@ -24,7 +24,7 @@ export const FilterSection: FC = () => {
               setIsActive(!isActive);
             }}
           >
-            <ExpandIcon className={`${isActive ? "rotate-90" : "rotate-0"}`} />
+            <ExpandIcon className={`${isActive ? "rotate-90 duration-500" : "rotate-0 duration-500"}`} />
           </div>
         </div>
         <div
@@ -100,7 +100,7 @@ export const FilterSection: FC = () => {
                   type="submit"
                   color="#0038FF"
                   radius="7px"
-                  className="text-normal text-white p-2.5 w-[289px]"
+                  className="text-normal text-white p-2.5 md:w-[289px] w-full"
                 >
                   Filter
                 </Button>
@@ -110,7 +110,7 @@ export const FilterSection: FC = () => {
                   type="reset"
                   color="#ffffff"
                   radius="7px"
-                  className="text-normal text-black p-2.5 w-[289px]"
+                  className="text-normal text-black p-2.5"
                 >
                   <span className="border-b">Reset filter</span>
                 </Button>

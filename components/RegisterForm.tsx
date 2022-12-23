@@ -14,13 +14,13 @@ export const RegisterForm: FC = () => {
     watch,
   } = useForm<any>();
 
-  const onFormSubmit = (data:any) => {
+  const onSubmit = (data:any) => {
     console.log(data)
   }
 
   return (
     <form
-      onSubmit={onFormSubmit}
+      onSubmit={handleSubmit(onSubmit)}
       className="mr-auto ml-auto sm:block flex flex-col items-center"
     >
       <div className="mb-[50px]">

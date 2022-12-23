@@ -35,13 +35,13 @@ const RecoveryForm: FC = () => {
   } = useForm();
   const [showModal,setShowModal] = useState(false)
 
-  const onFormSubmit = (data:any) => {
+  const onSubmit = (data:any) => {
     console.log(data)
   }
 
   return (
     <>
-      <form onSubmit={onFormSubmit} className="mr-auto ml-auto sm:block flex flex-col items-center">
+      <form onSubmit={handleSubmit(onSubmit)} className="mr-auto ml-auto sm:block flex flex-col items-center">
         <div className="md:mb-[30px] mb-5">
           <Link href={"/"}>
             <a>

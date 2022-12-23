@@ -20,11 +20,12 @@ interface Props {
   disabled?: boolean,
   children?: React.ReactNode;
   showSearchIcon?: boolean,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const TextBox: FC<Props> = ({
                                      error, name, label, placeholder, rule, showHideIcon = false,
-                                     containerClass, type, labelClass = '', inputClass, disabled, icon, errorClass,showSearchIcon
+                                     containerClass, type, labelClass = '', inputClass, disabled, icon, errorClass,showSearchIcon,onChange
                                    }) => {
   const [showPassword, setShowPassword] = useState(false)
   return (
@@ -49,6 +50,7 @@ export const TextBox: FC<Props> = ({
           name={name}
           type={type || showPassword ? 'text' : 'password'} // || yerine && koyarsak type tutmadığımız için hiç sorgulamadan koşula girmez
           disabled={disabled}
+          onChange={onChange}
           {...rule}
         />
         <>
