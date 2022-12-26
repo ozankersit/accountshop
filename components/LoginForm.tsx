@@ -6,16 +6,17 @@ import Button from "./Button";
 import TextBox from "./inputs/TextBox";
 import { SubmitHandler, useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import { useRouter } from "next/router";
 
 interface Inputs {
   email: string;
   password: string;
-  username: string;
 }
 
 export const LoginForm: FC = () => {
   const [login, setLogin] = useState(false);
   const { signIn } = useAuth();
+  const router = useRouter()
 
   const {
     formState: { errors },
@@ -24,6 +25,7 @@ export const LoginForm: FC = () => {
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = async ({ email, password }) => {
+    console.log(email,password)
     await signIn(email, password);
   };
 
@@ -41,12 +43,12 @@ export const LoginForm: FC = () => {
       </div>
       <TextBox
         type={"text"}
-        placeholder={"Email or Username"}
+        placeholder={"Email"}
         containerClass={"sm:w-[500px] w-[300px] flex items-center mb-[15px]"}
-        name="username"
-        error={errors?.username}
+        name="email"
+        error={errors?.email}
         rule={{
-          ...register("username", {
+          ...register("email", {
             required: "E-mail is required",
             pattern: {
               value:
@@ -75,7 +77,7 @@ export const LoginForm: FC = () => {
         color="#0038FF"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
-        onClick={() => setLogin(!setLogin)}
+        onClick={() => setLogin(true)}
       >
         Log in
       </Button>

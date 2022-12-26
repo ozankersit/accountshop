@@ -1,5 +1,6 @@
 import {
   createUserWithEmailAndPassword,
+  getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
@@ -41,12 +42,12 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     () => {
         onAuthStateChanged(auth, (user) => {
             if(user) {
-                //Login oluyor
+                //Login olan
                 setUser(user)
                 setLoading(false)
             }
             else {
-                //Login olamıyor
+                //Login olmayan
                 setUser(null)
                 setLoading(true)
                 router.push("/login")
@@ -74,10 +75,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     await signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setUser(userCredential.user);
+        alert("Login olundu")
         router.push("/");
         setLoading(false);
       })
-      .catch((error) => alert(error.message))
+      .catch((error) => alert(error.message && router.push("/register")))
       .finally(() => setLoading(false));
   };
 

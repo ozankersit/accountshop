@@ -98,7 +98,7 @@ export const RegisterForm: FC = () => {
         color="#0038FF"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
-        onClick={() => setLogin(!setLogin)}
+        onClick={() => setLogin(false)}
       >
         Create Account
       </Button>
