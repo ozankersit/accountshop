@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { FC, useState } from "react";
+import useAuth from "../../../hooks/useAuth";
 import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
+import { getAuth } from "firebase/auth";
+import Button from "../../Button";
 
 export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const {logout} = useAuth()
+  const auth = getAuth();
+  const user = auth.currentUser;
+  console.log(user)
 
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
@@ -36,7 +43,14 @@ export const Header: FC = () => {
             Account Sell
           </span>
         </Link>
-        <div className="flex items-center gap-2.5">
+        <div className={`items-center gap-2.5 ${user ? "flex":"hidden"}`}>
+          <Button
+          onClick={logout}
+          >
+            Logout
+          </Button>
+        </div>
+        <div className={`items-center gap-2.5 ${user ? "hidden":"flex"}`}>
           <Link href="/login">
             <span className="text-title text-light-blue cursor-pointer whitespace-nowrap">
               Sign in

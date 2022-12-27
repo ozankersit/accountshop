@@ -84,13 +84,11 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   };
 
   const logout = async () => {
-    setLoading(true);
-    signOut(auth)
-      .then(() => {
-        setUser(null);
-      })
-      .catch((error) => alert(error.message))
-      .finally(() => setLoading(false));
+    signOut(auth).then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      alert(error.message)
+    });
   };
 
   const memoedValue = useMemo(
