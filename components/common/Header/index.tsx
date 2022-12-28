@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FC, useState } from "react";
-import useAuth from "../../../hooks/useAuth";
 import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
@@ -9,7 +8,6 @@ import Button from "../../Button";
 
 export const Header: FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const {logout} = useAuth()
   const auth = getAuth();
   const user = auth.currentUser;
   console.log(user)
@@ -45,7 +43,7 @@ export const Header: FC = () => {
         </Link>
         <div className={`items-center gap-2.5 ${user ? "flex":"hidden"}`}>
           <Button
-          onClick={logout}
+          onClick={() => auth.signOut()} //Allah belanı versin firebase
           >
             Logout
           </Button>
