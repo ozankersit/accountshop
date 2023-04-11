@@ -1,16 +1,17 @@
 import Link from "next/link";
-import React, { FC, useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import useAuth from "../hooks/useAuth";
+import React, { FC } from "react";
+import { useForm } from "react-hook-form";
 import Button from "./Button";
 import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
 import GoogleIcon from "./Icons/GoogleIcon";
 import TextBox from "./inputs/TextBox";
+import { useAuth } from "../context/AuthContext";
+import { useRouter } from "next/router";
 
-interface Inputs {
+interface IProps {
   email: string;
   password: string;
-  username: string;
+  passwordConfirm: string;
 }
 
 export const RegisterForm: FC = () => {
@@ -21,12 +22,16 @@ export const RegisterForm: FC = () => {
     watch,
   } = useForm<any>();
 
-  const [login, setLogin] = useState(true)
-  const { signUp } = useAuth()
+  const { signUp } = useAuth();
+  const router = useRouter();
 
-
-  const onSubmit: SubmitHandler<Inputs> = async({email,password}) => {
-    await signUp(email, password)
+  const onSubmit = async (data: IProps) => {
+    try {
+      await signUp(data.email, data.password);
+      router.push("/login");
+    } catch (error: any) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -37,7 +42,7 @@ export const RegisterForm: FC = () => {
       <div className="mb-[50px]">
         <Link href={"/"}>
           <a>
-          <HeaderLogoIcon />
+            <HeaderLogoIcon />
           </a>
         </Link>
       </div>
@@ -98,7 +103,7 @@ export const RegisterForm: FC = () => {
         color="#0038FF"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
-        onClick={() => setLogin(false)}
+        // onClick={() => setLogin(false)}
       >
         Create Account
       </Button>

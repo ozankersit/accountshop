@@ -1,32 +1,35 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import GoogleIcon from "./Icons/GoogleIcon";
 import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
 import Button from "./Button";
 import TextBox from "./inputs/TextBox";
-import { SubmitHandler, useForm } from "react-hook-form";
-import useAuth from "../hooks/useAuth";
+import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
+import { useAuth } from "../context/AuthContext";
 
-interface Inputs {
+interface IProps {
   email: string;
   password: string;
 }
 
 export const LoginForm: FC = () => {
-  const [login, setLogin] = useState(false);
-  const { signIn } = useAuth();
-  const router = useRouter()
-
   const {
     formState: { errors },
     handleSubmit,
     register,
-  } = useForm<Inputs>();
+  } = useForm<any>();
 
-  const onSubmit: SubmitHandler<Inputs> = async ({ email, password }) => {
-    console.log(email,password)
-    await signIn(email, password);
+  const { signIn } = useAuth();
+  const router = useRouter();
+
+  const onSubmit = async (data: IProps) => {
+    try {
+      await signIn(data.email, data.password);
+      router.push("/");
+    } catch (error: any) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -77,7 +80,6 @@ export const LoginForm: FC = () => {
         color="#0038FF"
         radius="7px"
         className="py-2.5 pl-5 pr-2.5 text-white sm:w-[500px] w-[300px]"
-        onClick={() => setLogin(true)}
       >
         Log in
       </Button>

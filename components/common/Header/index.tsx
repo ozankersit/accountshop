@@ -3,18 +3,27 @@ import { FC, useState } from "react";
 import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
-import { getAuth } from "firebase/auth";
 import Button from "../../Button";
+import { useAuth } from "../../../context/AuthContext";
+import { useRouter } from "next/router";
 
 export const Header: FC = () => {
+  const { user, logOut } = useAuth();
+  const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const auth = getAuth();
-  const user = auth.currentUser;
-  console.log(user)
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      router.push("/login");
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
-        <HeaderLogoIcon />
+      <HeaderLogoIcon />
       <div className="xl:flex hidden justify-center items-center pt-2.5 gap-[50px]">
         <Link href="/">
           <span className="text-title text-dark cursor-pointer whitespace-nowrap">
@@ -41,21 +50,18 @@ export const Header: FC = () => {
             Account Sell
           </span>
         </Link>
-        <div className={`items-center gap-2.5 ${user ? "flex":"hidden"}`}>
-          <Button
-          onClick={() => auth.signOut()} //Allah belanı versin firebase
-          >
-            Logout
-          </Button>
-        </div>
-        <div className={`items-center gap-2.5 ${user ? "hidden":"flex"}`}>
-          <Link href="/login">
-            <span className="text-title text-light-blue cursor-pointer whitespace-nowrap">
-              Sign in
-            </span>
-          </Link>
+        <div className={`items-center gap-2.5 flex`}>
+          {!user.uid ? (
+            <Link href="/login">
+              <span className="text-title text-light-blue cursor-pointer whitespace-nowrap">
+                Sign in
+              </span>
+            </Link>
+          ) : (
+            <Button onClick={handleLogout}>Logout</Button>
+          )}
           <Link href="/register">
-            <button className="bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title">
+            <button className={`${!user.uid ? "block":"hidden"} bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title`}>
               Sign Up
             </button>
           </Link>
@@ -72,11 +78,11 @@ export const Header: FC = () => {
       <div
         className={
           isNavOpen
-            ? "block !fixed absolute bg-[#020124] left-0 top-0 w-[70%] max-w-xs h-screen overflow-auto z-[1000000]"
+            ? "block !fixed bg-[#020124] left-0 top-0 w-[70%] max-w-xs h-screen overflow-auto z-[1000000]"
             : "hidden"
         }
       >
-        <FooterLogoIcon/>
+        <FooterLogoIcon />
       </div>
       <div
         onClick={() => {

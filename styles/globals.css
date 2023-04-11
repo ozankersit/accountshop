@@ -203,3 +203,9 @@ a {
   background-color: #AFB3C780;
   z-index: 99;
 }
+
+.deneme {
+  height: 300px;
+  width: 300px;
+  border: 1px solid green;
+}

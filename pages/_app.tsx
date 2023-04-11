@@ -1,18 +1,18 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
 import Layout from "../components/Layout";
-import { AuthProvider } from '../hooks/useAuth';
-
-
+import { AuthContextProvider } from "../context/AuthContext";
+// import initMyFirebase from "../firebase/firebaseInIt";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  // initMyFirebase();
   return (
-    <Layout>
-      <AuthProvider>
-      <Component {...pageProps} />
-      </AuthProvider>
-    </Layout>
-  )
+    <AuthContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthContextProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
