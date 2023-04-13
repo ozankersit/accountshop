@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import DiscordIcon from "../components/Icons/DiscordIcon";
 import InstagramIcon from "../components/Icons/InstagramIcon";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/features/LoginForm";
 import RightContent from "../components/ui/RightContent";
 
 export const Login: FC = () => {

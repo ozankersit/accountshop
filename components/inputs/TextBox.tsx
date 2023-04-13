@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import classNames from "classnames";
-import ShowPassword from "../ShowPassword";
+import ShowPassword from "../features/ShowPassword";
 import SearchIcon from "../Icons/SearchIcon";
 
 

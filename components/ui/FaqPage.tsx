@@ -1,5 +1,5 @@
 import React,{FC} from 'react'
-import AccordionFaq from '../AccordionFaq'
+import AccordionFaq from '../features/AccordionFaq'
 
 interface Props {
     data:any;

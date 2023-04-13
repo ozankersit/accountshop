@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/features/Button";
 import BuyPhaseIcon from "../components/Icons/BuyPhaseIcon";
 import ConfirmationIcon from "../components/Icons/ConfirmationIcon";
 import FilterPrototypeIcon from "../components/Icons/FilterPrototypeIcon";

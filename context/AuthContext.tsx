@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { auth } from "../firebase/firebaseInIt";
 
@@ -27,6 +28,7 @@ export const AuthContextProvider = ({
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        console.log(user)
         setUser({
           email: user.email,
           uid: user.uid,
@@ -52,6 +54,11 @@ export const AuthContextProvider = ({
     setUser({ email: null, uid: null });
     await signOut(auth);
   };
+
+  const forgotPassword = async (email: string) => {
+    return await sendPasswordResetEmail(auth, email)
+    console.log("sent")
+  }
 
   return (
     <AuthContext.Provider value={{ user, signUp, signIn, logOut }}>

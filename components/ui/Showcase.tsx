@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FC } from "react";
-import Button from "../Button";
+import Button from "../features/Button";
 import ArrowIcon from "../Icons/ArrowIcon";
 
 export const Showcase: FC = () => {

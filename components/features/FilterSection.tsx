@@ -1,14 +1,14 @@
 import React, { FC, useState } from "react";
 import { useForm } from "react-hook-form";
-import Button from "../components/Button";
-import GamesForm from "../components/GamesForm";
-import ExpandIcon from "../components/Icons/ExpandIcon";
-import GemIcon from "../components/Icons/GemIcon";
-import PaletteIcon from "../components/Icons/PaletteIcon";
-import PiggyIcon from "../components/Icons/PiggyIcon";
-import TextBox from "../components/inputs/TextBox";
-import RanksForm from "../components/RanksForm";
-import ServerForm from "../components/ServerForm";
+import Button from "./Button";
+import GamesForm from "./GamesForm";
+import ExpandIcon from "../Icons/ExpandIcon";
+import GemIcon from "../Icons/GemIcon";
+import PaletteIcon from "../Icons/PaletteIcon";
+import PiggyIcon from "../Icons/PiggyIcon";
+import TextBox from "../inputs/TextBox";
+import RanksForm from "./RanksForm";
+import ServerForm from "./ServerForm";
 
 export const FilterSection: FC = () => {
   const { register } = useForm();

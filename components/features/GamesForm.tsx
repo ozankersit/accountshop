@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import ControllerIcon from "./Icons/ControllerIcon";
-import CheckBox from "./inputs/CheckBox";
+import ControllerIcon from "../Icons/ControllerIcon";
+import CheckBox from "../inputs/CheckBox";
 
 export const GamesForm: FC = () => {
   return (

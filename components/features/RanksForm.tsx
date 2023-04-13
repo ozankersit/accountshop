@@ -1,15 +1,15 @@
 import React, { FC } from "react";
-import BronzeIcon from "./Icons/league-icons/BronzeIcon";
-import ChallengerIcon from "./Icons/league-icons/ChallengerIcon";
-import DiamondIcon from "./Icons/league-icons/DiamondIcon";
-import GoldIcon from "./Icons/league-icons/GoldIcon";
-import IronIcon from "./Icons/league-icons/IronIcon";
-import MasterIcon from "./Icons/league-icons/MasterIcon";
-import PlatIcon from "./Icons/league-icons/PlatIcon";
-import SilverIcon from "./Icons/league-icons/SilverIcon";
-import UnrankedIcon from "./Icons/league-icons/UnrankedIcon";
-import TrophyIcon from "./Icons/TrophyIcon";
-import CheckBox from "./inputs/CheckBox";
+import BronzeIcon from "../Icons/league-icons/BronzeIcon";
+import ChallengerIcon from "../Icons/league-icons/ChallengerIcon";
+import DiamondIcon from "../Icons/league-icons/DiamondIcon";
+import GoldIcon from "../Icons/league-icons/GoldIcon";
+import IronIcon from "../Icons/league-icons/IronIcon";
+import MasterIcon from "../Icons/league-icons/MasterIcon";
+import PlatIcon from "../Icons/league-icons/PlatIcon";
+import SilverIcon from "../Icons/league-icons/SilverIcon";
+import UnrankedIcon from "../Icons/league-icons/UnrankedIcon";
+import TrophyIcon from "../Icons/TrophyIcon";
+import CheckBox from "../inputs/CheckBox";
 
 export const RanksForm: FC = () => {
   return (

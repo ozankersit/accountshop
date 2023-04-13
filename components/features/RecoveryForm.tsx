@@ -2,11 +2,11 @@ import Link from "next/link";
 import React, { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "./Button";
-import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
-import TextBox from "./inputs/TextBox";
+import HeaderLogoIcon from "../common/Header/HeaderIcons/HeaderLogoIcon";
+import TextBox from "../inputs/TextBox";
 import { useRouter } from "next/router";
 import Modal from 'react-modal';
-import CheckIcon from "./Icons/CheckIcon";
+import CheckIcon from "../Icons/CheckIcon";
 
 const customStyles = {
   content: {

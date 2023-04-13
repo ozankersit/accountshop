@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import DiscordIcon from "../components/Icons/DiscordIcon";
 import InstagramIcon from "../components/Icons/InstagramIcon";
-import RegisterForm from "../components/RegisterForm";
+import RegisterForm from "../components/features/RegisterForm";
 import RightContent from "../components/ui/RightContent";
 
 export const Register: FC = () => {

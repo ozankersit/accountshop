@@ -3,9 +3,10 @@ import { FC, useState } from "react";
 import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
-import Button from "../../Button";
+import Button from "../../features/Button";
 import { useAuth } from "../../../context/AuthContext";
 import { useRouter } from "next/router";
+import ProfileIcon from "../../Icons/ProfileIcon";
 
 export const Header: FC = () => {
   const { user, logOut } = useAuth();
@@ -58,7 +59,9 @@ export const Header: FC = () => {
               </span>
             </Link>
           ) : (
-            <Button onClick={handleLogout}>Logout</Button>
+            // <Button onClick={handleLogout}>Logout</Button>
+            <Link href="/profile/dashboard"><ProfileIcon/></Link>
+            
           )}
           <Link href="/register">
             <button className={`${!user.uid ? "block":"hidden"} bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title`}>

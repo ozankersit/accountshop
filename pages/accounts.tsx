@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import FilterSection from "../components/FilterSection";
+import FilterSection from "../components/features/FilterSection";
 
 export const Accounts: FC = () => {
   const [color, setColor] = useState("")

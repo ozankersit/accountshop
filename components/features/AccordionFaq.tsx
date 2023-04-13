@@ -1,5 +1,5 @@
 import {FC, useState} from 'react';
-import PlusIcon from './Icons/PlusIcon';
+import PlusIcon from '../Icons/PlusIcon';
 
 interface Props {
   content: string,

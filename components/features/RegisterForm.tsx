@@ -2,10 +2,10 @@ import Link from "next/link";
 import React, { FC } from "react";
 import { useForm } from "react-hook-form";
 import Button from "./Button";
-import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
-import GoogleIcon from "./Icons/GoogleIcon";
-import TextBox from "./inputs/TextBox";
-import { useAuth } from "../context/AuthContext";
+import HeaderLogoIcon from "../common/Header/HeaderIcons/HeaderLogoIcon";
+import GoogleIcon from "../Icons/GoogleIcon";
+import TextBox from "../inputs/TextBox";
+import { useAuth } from "../../context/AuthContext";
 import { useRouter } from "next/router";
 
 interface IProps {

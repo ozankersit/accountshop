@@ -1,7 +1,7 @@
 import React from 'react'
 import DiscordIcon from '../components/Icons/DiscordIcon'
 import InstagramIcon from '../components/Icons/InstagramIcon'
-import RecoveryForm from '../components/RecoveryForm'
+import RecoveryForm from '../components/features/RecoveryForm'
 import RightContent from '../components/ui/RightContent'
 
 export const Recovery = () => {

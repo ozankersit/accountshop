@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import ControllerIcon from "./Icons/ControllerIcon";
-import WorldIcon from "./Icons/WorldIcon";
-import CheckBox from "./inputs/CheckBox";
+import ControllerIcon from "../Icons/ControllerIcon";
+import WorldIcon from "../Icons/WorldIcon";
+import CheckBox from "../inputs/CheckBox";
 
 export const ServerForm: FC = () => {
   return (

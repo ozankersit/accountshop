@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import GoogleIcon from "./Icons/GoogleIcon";
-import HeaderLogoIcon from "./common/Header/HeaderIcons/HeaderLogoIcon";
+import GoogleIcon from "../Icons/GoogleIcon";
+import HeaderLogoIcon from "../common/Header/HeaderIcons/HeaderLogoIcon";
 import Button from "./Button";
-import TextBox from "./inputs/TextBox";
+import TextBox from "../inputs/TextBox";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 interface IProps {
   email: string;
@@ -26,6 +26,7 @@ export const LoginForm: FC = () => {
   const onSubmit = async (data: IProps) => {
     try {
       await signIn(data.email, data.password);
+      console.log(data)
       router.push("/");
     } catch (error: any) {
       console.log(error.message);

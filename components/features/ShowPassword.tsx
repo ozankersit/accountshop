@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import OpenEyeIcon from './Icons/OpenEyeIcon';
-import SlashedEyeIcon from './Icons/SlashedEyeIcon';
+import OpenEyeIcon from '../Icons/OpenEyeIcon';
+import SlashedEyeIcon from '../Icons/SlashedEyeIcon';
 
 
 interface Props {
