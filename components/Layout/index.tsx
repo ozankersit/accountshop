@@ -12,7 +12,7 @@ export const Layout:FC<Props> = ({children}) => {
   const { pathname } = router;
 
   const hideHeader = pathname.includes('/login') || pathname.includes('/register') || pathname.includes('/recovery');
-  const hideFooter = pathname.includes('/login') || pathname.includes('/register') || pathname.includes('/accounts') || pathname.includes('/recovery');
+  const hideFooter = pathname.includes('/login') || pathname.includes('/register') || pathname.includes('/accounts') || pathname.includes('/recovery') || pathname.includes('/profile');
 
   return (
     <div>

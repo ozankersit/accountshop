@@ -7,7 +7,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      gap: {
+        7.5: '1.875', // 30px
+      },
+    },
     fontFamily: {
       'sans': ['Inter', ...defaultTheme.fontFamily.sans],
     },
