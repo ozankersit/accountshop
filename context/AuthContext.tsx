@@ -56,12 +56,12 @@ export const AuthContextProvider = ({
     await signOut(auth);
   };
 
-  const updateUser = async (displayName: string) => {
-    return updateProfile(auth.currentUser as any, { displayName: displayName })
+  const updateUser = async (displayName: string, photoURL:string) => {
+    return (updateProfile(auth.currentUser as any, { displayName: displayName, photoURL: photoURL })
       .then(() => {
         console.log("displayName updated");
       })
-      .catch((error: string) => {});
+      .catch((error: string) => {}))
   };
 
   return (
