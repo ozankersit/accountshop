@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
-  sendPasswordResetEmail,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase/firebaseInIt";
 
@@ -28,8 +28,8 @@ export const AuthContextProvider = ({
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user)
-        console.log(user.displayName)
+        console.log(user);
+        console.log(user.displayName);
         setUser({
           email: user.email,
           uid: user.uid,
@@ -56,13 +56,16 @@ export const AuthContextProvider = ({
     await signOut(auth);
   };
 
-  const forgotPassword = async (email: string) => {
-    return await sendPasswordResetEmail(auth, email)
-    console.log("sent")
-  }
+  const updateUser = async (displayName: string) => {
+    return updateProfile(auth.currentUser as any, { displayName: displayName })
+      .then(() => {
+        console.log("displayName updated");
+      })
+      .catch((error: string) => {});
+  };
 
   return (
-    <AuthContext.Provider value={{ user, signUp, signIn, logOut }}>
+    <AuthContext.Provider value={{ user, signUp, signIn, logOut, updateUser }}>
       {loading ? "LOADING" : children}
     </AuthContext.Provider>
   );

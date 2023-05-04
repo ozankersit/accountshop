@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from "next/link";
-import { getAuth, updateProfile } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 import Image from "next/image";
 
 interface IProps {
@@ -9,7 +9,7 @@ interface IProps {
 
 const tabs = [
   { id: 1, title: "Profile Details", route: "/profile/dashboard" },
-  { id: 2, title: "İlanlarım", route: "/profile/advert" },
+  { id: 2, title: "Adverts", route: "/profile/advert" },
   { id: 3, title: "Orders" },
   { id: 4, title: "Sales" },
   { id: 5, title: "Change Password" },
@@ -18,38 +18,16 @@ const tabs = [
   { id: 8, title: "Log out" },
 ];
 
-const auth = getAuth();
-{/*burayı dashboardda inputlarda kullanıcam şu an sadece test etmek için burda kullandım*/}
-const profileUpdates = updateProfile(auth.currentUser as any, {
-  displayName: "Ozan Kerşit",
-  photoURL: "https://i.imgur.com/OWEeevl.jpg",
-})
-  .then(() => {
-    console.log("profile updated");
-  })
-  .catch((error: string) => {});
-
-
-{/*burayı da aynı şekilde test etmek için kullandım*/}
-const user = auth.currentUser;
-if (user !== null) {
-  // The user object has basic properties such as display name, email, etc.
-  const displayName = user.displayName;
-  const email = user.email;
-  const photoURL = user.photoURL;
-  const emailVerified = user.emailVerified;
-
-  console.log(email);
-  console.log(displayName);
-}
 
 const ProfileLeftMenu: FC<IProps> = ({ children }) => {
+  const auth = getAuth();
+  const user = auth.currentUser;
   return (
     <div className="flex gap-2.5  justify-center items-center mt-[93px] mb-[153px]">
-      <div className=" flex flex-col gap-10 justify-center bg-white max-w-xs pl-7 rounded-md">
-        <div className="flex gap-2.5 mt-10 mr-16">
+      <div className=" flex flex-col gap-10 justify-center bg-white max-w-xs pl-7 rounded-[7px]">
+        <div className="flex gap-2.5 mt-10 mr-16 items-center">
           {/* <Image src={`${user?.photoURL}`} width={50} height={50} /> */}
-          <img src={`${user?.photoURL}`} /> {/*buraya next image gelecek*/}
+          <img src={`${user?.photoURL}`} className="w-[50px] h-[50px]"></img> {/*next imag gelicek buraya*/}
           <span className="text-dark text-title">{user?.displayName}</span>
         </div>
         <div className="flex flex-col gap-7 pb-[214px]">
@@ -62,7 +40,7 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
           ))}
         </div>
       </div>
-      <div className="bg-white">{children}</div>
+      <div className="bg-white rounded-[7px]">{children}</div>
     </div>
   );
 };

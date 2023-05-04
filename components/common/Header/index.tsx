@@ -7,9 +7,12 @@ import Button from "../../features/Button";
 import { useAuth } from "../../../context/AuthContext";
 import { useRouter } from "next/router";
 import ProfileIcon from "../../Icons/ProfileIcon";
+import { getAuth } from "firebase/auth";
 
 export const Header: FC = () => {
-  const { user, logOut } = useAuth();
+  const {  logOut, user } = useAuth();
+  const auth = getAuth();
+  const userProps = auth.currentUser
   const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -21,7 +24,6 @@ export const Header: FC = () => {
       console.log(error.message);
     }
   };
-
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
       <HeaderLogoIcon />
@@ -60,7 +62,7 @@ export const Header: FC = () => {
             </Link>
           ) : (
             // <Button onClick={handleLogout}>Logout</Button>
-            <Link href="/profile/dashboard"><ProfileIcon/></Link>
+            <Link href="/profile/dashboard"><img src={`${userProps?.photoURL}`} className="w-[50px] h-[50px]"></img></Link>
             
           )}
           <Link href="/register">
