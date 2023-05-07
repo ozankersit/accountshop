@@ -52,14 +52,14 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
   const user = auth.currentUser;
   const router = useRouter();
   return (
-    <div className="flex gap-2.5  justify-center items-center mt-[93px] mb-[153px]">
-      <div className=" flex flex-col gap-10 justify-center bg-white max-w-xs pl-7 rounded-[7px]">
+    <div className="flex gap-2.5 md:px-[150px] px-5 items-center mt-[93px] mb-[153px]">
+      <div className=" flex flex-col gap-10 bg-white max-w-xs pl-7 rounded-[7px]">
         <div className="flex gap-2.5 mt-10 mr-16 items-center">
           <img src={`${user?.photoURL}`} className="w-[50px] h-[50px]"></img>{" "}
           {/*next image gelicek buraya*/}
-          <span className="text-dark text-title">{user?.displayName}</span>
+          <span className="text-dark text-title whitespace-nowrap">{user?.displayName}</span>
         </div>
-        <div className="flex flex-col gap-7 pb-[214px]">
+        <div className="flex flex-col gap-7 pb-52">
           {tabs.map((item) => (
             <Link href={`${item.route}`} key={item.id}>
               <div
