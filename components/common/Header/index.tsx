@@ -3,27 +3,14 @@ import { FC, useState } from "react";
 import FooterLogoIcon from "../Footer/FooterIcons/FooterLogoIcon";
 import HeaderLogoIcon from "./HeaderIcons/HeaderLogoIcon";
 import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
-import Button from "../../features/Button";
 import { useAuth } from "../../../context/AuthContext";
-import { useRouter } from "next/router";
-import ProfileIcon from "../../Icons/ProfileIcon";
 import { getAuth } from "firebase/auth";
 
 export const Header: FC = () => {
-  const {  logOut, user } = useAuth();
+  const { user } = useAuth();
   const auth = getAuth();
   const userProps = auth.currentUser
-  const router = useRouter();
   const [isNavOpen, setIsNavOpen] = useState(false);
-
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      router.push("/login");
-    } catch (error: any) {
-      console.log(error.message);
-    }
-  };
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
       <HeaderLogoIcon />
@@ -53,16 +40,15 @@ export const Header: FC = () => {
             Account Sell
           </span>
         </Link>
-        <div className={`items-center gap-2.5 flex`}>
+        <div className={`items-center gap-2.5 flex cursor-pointer`}>
           {!user.uid ? (
             <Link href="/login">
-              <span className="text-title text-light-blue cursor-pointer whitespace-nowrap">
+              <span className="text-title text-light-blue whitespace-nowrap">
                 Sign in
               </span>
             </Link>
           ) : (
-            // <Button onClick={handleLogout}>Logout</Button>
-            <Link href="/profile/dashboard"><img src={`${userProps?.photoURL}`} className="w-[50px] h-[50px]"></img></Link>
+            <Link href="/profile/dashboard"><span className="text-white py-2 px-3 bg-primary rounded-[10px]">{userProps?.displayName?.charAt(0)}</span></Link>
             
           )}
           <Link href="/register">

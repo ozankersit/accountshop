@@ -1,6 +1,5 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { getAuth } from "firebase/auth";
-import Image from "next/image";
 import DashboardProfileIcon from "../../../components/Icons/DashboardProfileIcon";
 import FolderIcon from "../../../components/Icons/FolderIcon";
 import CartIcon from "../../../components/Icons/CartIcon";
@@ -11,6 +10,8 @@ import QuestionIcon from "../../../components/Icons/QuestionIcon";
 import LogOutIcon from "../../../components/Icons/LogOutIcon";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Button from "../../../components/features/Button";
+import { useAuth } from "../../../context/AuthContext";
 
 interface IProps {
   children?: React.ReactNode;
@@ -44,20 +45,33 @@ const tabs = [
     title: "Support",
     route: "/profile/support",
   },
-  { id: 8, icon: <LogOutIcon />, title: "Log out" },
 ];
 
 const ProfileLeftMenu: FC<IProps> = ({ children }) => {
+  const { logOut } = useAuth();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      router.push("/login");
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
   const auth = getAuth();
   const user = auth.currentUser;
   const router = useRouter();
   return (
     <div className="flex gap-2.5 md:px-[150px] px-5 items-center mt-[93px] mb-[153px]">
       <div className=" flex flex-col gap-10 bg-white max-w-xs pl-7 rounded-[7px]">
-        <div className="flex gap-2.5 mt-10 mr-16 items-center">
-          <img src={`${user?.photoURL}`} className="w-[50px] h-[50px]"></img>{" "}
-          {/*next image gelicek buraya*/}
-          <span className="text-dark text-title whitespace-nowrap">{user?.displayName}</span>
+        <div className="flex gap-2.5 mt-12 mr-16 items-center">
+          <div className="py-2.5">
+            <span className="text-white py-[13px] px-[17px] bg-primary rounded-[10px]">
+              {user?.displayName?.charAt(0)}
+            </span>
+          </div>
+          <span className="text-dark text-title whitespace-nowrap">
+            {user?.displayName}
+          </span>
         </div>
         <div className="flex flex-col gap-7 pb-52">
           {tabs.map((item) => (
@@ -72,10 +86,28 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
                 >
                   {item.title}
                 </span>
-                {item.icon}{" "}
+                <div
+                  className={`${
+                    router.route == `${item.route}`
+                      ? "dashboard-left-menu"
+                      : null
+                  }`}
+                >
+                  {item.icon}
+                </div>
               </div>
             </Link>
           ))}
+          <div
+            className={`flex flex-row-reverse justify-end gap-2 items-center cursor-pointer`}
+          >
+            <Button onClick={handleLogout}>
+              <span className="text-primary">Log Out</span>
+            </Button>
+            <div>
+              <LogOutIcon />
+            </div>
+          </div>
         </div>
       </div>
       <div className="bg-white rounded-[7px]">{children}</div>

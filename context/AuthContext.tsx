@@ -29,7 +29,7 @@ export const AuthContextProvider = ({
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log(user);
-        console.log(user.displayName);
+        console.log(user.displayName?.charAt(0));
         setUser({
           email: user.email,
           uid: user.uid,

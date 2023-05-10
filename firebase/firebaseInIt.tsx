@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { doc, getFirestore, setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4cZJWnyJG992ZR7yF1lWbTZy1UPaRuyk",
@@ -11,23 +12,27 @@ const firebaseConfig = {
   measurementId: "G-W1CMKHLJM8"
 };
 
-// Initialize Firebase
-// const initMyFirebase = () => {
-//   if (!getApps().length) {
-//     const app = initializeApp(firebaseConfig);
-//     const auth = getAuth(app);
-//     if (typeof window !== "undefined") {
-//       if ("measurementId" in firebaseConfig) {
-//         const analytics = getAnalytics(app);
-//         const performance = getPerformance(app);
-//       }
-//     }
-//     console.log("Initialized firebase");
-//   } else {
-//     console.log("Already initialized");
-//   }
-// };
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 
-// export default initMyFirebase;
+const firestore = getFirestore();
+const specialOfTheDay = doc(firestore, 'dailySpecial/2023-05-07')
+// const childDoc = doc(specialOfTheDay, 'orderHistory/totalSales')
+// dailySpecial/2023-05-07/orderHistory/totalSales
+
+const writeData = () => {
+  const docData = {
+    description: 'deneme123',
+    price: 3.99,
+    milk: 'Whole',
+    vegan: false,
+  }
+  setDoc(specialOfTheDay, docData)
+  .then(() => {
+    console.log("DATA SETTED")
+  })
+  .catch((error) => {
+    console.log(`error: ${error}`)
+  })
+}
+writeData()

@@ -203,3 +203,7 @@ a {
   background-color: #AFB3C780;
   z-index: 99;
 }
+
+.dashboard-left-menu svg path {
+  fill: #0f0f0f
+}
