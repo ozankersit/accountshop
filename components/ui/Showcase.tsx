@@ -23,9 +23,9 @@ export const Showcase: FC = () => {
             </div>
           </Button>
         </Link>
-        <Link href="">
+        {/* <Link href="">
             <span className="ml-[15px] text-primary text-title underline cursor-pointer md:inline hidden">or sell account</span>
-        </Link>
+        </Link> */}
         </div>
       </div>
       <div className="cards">

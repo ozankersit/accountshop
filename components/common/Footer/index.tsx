@@ -47,7 +47,7 @@ export const Footer: FC = () => {
          <Link href="/how-can-i-buy">
          <p className="text-white text-title cursor-pointer">How Can I Buy ?</p>
          </Link>
-         <p className="text-white text-title cursor-pointer">Account Sell</p>
+         {/* <p className="text-white text-title cursor-pointer">Account Sell</p> */}
        </div>
        <div className={"lg:ml-auto lg:mt-4 mt-10 flex flex-col gap-[15px]"}>
          <p className="text-white text-title-bold mb-6">Legal</p>

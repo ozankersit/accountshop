@@ -35,11 +35,6 @@ export const Header: FC = () => {
             FAQ
           </span>
         </Link>
-        <Link href="/">
-          <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            Account Sell
-          </span>
-        </Link>
         <div className={`items-center gap-2.5 flex cursor-pointer`}>
           {!user.uid ? (
             <Link href="/login">
