@@ -14,6 +14,7 @@ export const Layout:FC<Props> = ({children}) => {
   const { pathname } = router;
   const { y } = useWindowScroll();
   const isScrolling = y > 800;
+ 
 
   const hideHeader = pathname.includes('/login') || pathname.includes('/register') || pathname.includes('/recovery');
   const hideFooter = pathname.includes('/login') || pathname.includes('/register') || pathname.includes('/accounts') || pathname.includes('/recovery') || pathname.includes('/profile');

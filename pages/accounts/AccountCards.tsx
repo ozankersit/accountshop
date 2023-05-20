@@ -22,17 +22,17 @@ const AccountCards: FC<IProps> = ({ title }) => {
   const { user } = useAuth();
   return (
     <div className="w-full max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 hover:shadow-2xl hover:translate-y-2 transition duration-300 ease-in-out">
-      <h5 className="mb-4 text-title font-medium text-gray-500 md:whitespace-nowrap whitespace-normal flex-wrap">
+      <h5 className="mb-4 text-title font-medium text-dark md:whitespace-nowrap whitespace-normal flex-wrap">
         {title}
       </h5>
       <div className="flex items-baseline text-gray-90">
         <span className="text-head font-semibold">$</span>
         <span className="text-xl font-extrabold tracking-tight">2</span>
-        <span className="ml-1 text-title font-normal text-gray-500">/per</span>
+        <span className="ml-1 text-title font-normal text-dark">/per</span>
       </div>
       <ul role="list" className="space-y-5 my-7">
         <li className="flex space-x-3">
-          <span className="text-base font-normal leading-tight text-gray-500">
+          <span className="text-base font-normal leading-tight text-dark">
             {listItems.map((listItems) => (
               <div key={listItems.id} className="flex gap-3 mb-5">
                 <ListCheckIcon />
