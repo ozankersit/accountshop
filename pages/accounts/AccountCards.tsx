@@ -26,8 +26,8 @@ const AccountCards: FC<IProps> = ({ title }) => {
         {title}
       </h5>
       <div className="flex items-baseline text-gray-90">
-        <span className="text-head font-semibold">$</span>
-        <span className="text-xl font-extrabold tracking-tight">2</span>
+        <span className="text-head font-semibold text-black">$</span>
+        <span className="text-xl font-extrabold tracking-tight text-black">2</span>
         <span className="ml-1 text-title font-normal text-dark">/per</span>
       </div>
       <ul role="list" className="space-y-5 my-7">

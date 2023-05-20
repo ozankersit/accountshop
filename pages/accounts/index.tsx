@@ -13,6 +13,7 @@ export const Accounts: FC = () => {
         </div>
         <div className="flex gap-5 justify-center items-center max-w-[754px]">
         <AccountCards title="Random Valorant Account"/>
+        <AccountCards title="Valorant Account"/>
         </div>
       </div>
     </div>
