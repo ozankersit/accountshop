@@ -6,10 +6,17 @@ import { MobileMenuIcon } from "./HeaderIcons/MobileMenuIcon";
 import { useAuth } from "../../../context/AuthContext";
 import { getAuth } from "firebase/auth";
 
+const menuItems = [
+  { id: 1, title: "Home", route:"/" },
+  { id: 2, title: "Accounts", route:"/accounts" },
+  { id: 3, title: "How Can I Buy ?", route:"how-can-i-buy" },
+  { id: 4, title: "FAQ", route:"/#faq-page" },
+];
+
 export const Header: FC = () => {
   const { user } = useAuth();
   const auth = getAuth();
-  const userProps = auth.currentUser
+  const userProps = auth.currentUser;
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
@@ -43,11 +50,18 @@ export const Header: FC = () => {
               </span>
             </Link>
           ) : (
-            <Link href="/profile/dashboard"><span className="text-white py-2 px-3 bg-primary rounded-[10px]">{userProps?.displayName?.charAt(0)}</span></Link>
-            
+            <Link href="/profile/dashboard">
+              <span className="text-white py-2 px-3 bg-primary rounded-[10px]">
+                {userProps?.displayName?.charAt(0)}
+              </span>
+            </Link>
           )}
           <Link href="/register">
-            <button className={`${!user.uid ? "block":"hidden"} bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title`}>
+            <button
+              className={`${
+                !user.uid ? "block" : "hidden"
+              } bg-blue-button rounded-[7px] p-2.5 w-[128px] h-[44px] text-title`}
+            >
               Sign Up
             </button>
           </Link>
@@ -68,7 +82,37 @@ export const Header: FC = () => {
             : "hidden"
         }
       >
-        <FooterLogoIcon />
+        <div className="pl-5 flex flex-col">
+          <div className="mb-10">
+            <FooterLogoIcon />
+          </div>
+          <div>
+            <div className={`flex ${!user.uid ? "hidden":"block"}`}>
+            <Link href="/profile/dashboard">
+              <div className="text-white flex items-center justify-center mb-10 gap-2">
+                <span className="py-2 px-3 bg-primary rounded-[10px]">{userProps?.displayName?.charAt(0)}</span>
+                <span>{userProps?.displayName}</span>
+              </div>
+            </Link>
+            </div>
+            <ul className="flex flex-col justify-center gap-5">
+              {menuItems.map((item) => (
+                <li key={item.id} className="text-white">
+                  <Link href={item.route}>{item.title}</Link>
+                </li>
+              ))}
+              <div className={`flex flex-col gap-5 ${!user.uid ? "block":"hidden"}`}>
+              <li>
+                <span className="text-white">Sign in</span>
+              </li>
+              <li>
+                {" "}
+                <span className="text-white">Sign Up</span>{" "}
+              </li>
+              </div>
+            </ul>
+          </div>
+        </div>
       </div>
       <div
         onClick={() => {
