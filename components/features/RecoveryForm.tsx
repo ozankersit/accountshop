@@ -4,7 +4,8 @@ import { useForm } from "react-hook-form";
 import Button from "./Button";
 import HeaderLogoIcon from "../common/Header/HeaderIcons/HeaderLogoIcon";
 import TextBox from "../inputs/TextBox";
-import { useRouter } from "next/router";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import router from "next/router";
 import Modal from 'react-modal';
 import CheckIcon from "../Icons/CheckIcon";
 
@@ -27,30 +28,43 @@ const customStyles = {
 }
 
 const RecoveryForm: FC = () => {
-  const router = useRouter();
-  const {
-    formState: { errors },
-    handleSubmit,
-    register,
-  } = useForm();
+  const [email, setEmail] = useState();
   const [showModal,setShowModal] = useState(false)
 
-  const onSubmit = (data:any) => {
-    console.log(data)
-  }
+  const getEmail: string = email || "";
+
+  const ChangePassword = () => {
+    const auth = getAuth();
+    sendPasswordResetEmail(auth, getEmail)
+      .then(() => {
+        // Password reset email sent!
+        // ..
+        setShowModal(true)
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      });
+  };
+
+  const handleChange = (event:any) => {
+    setEmail(event.target.value);
+  };
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="mr-auto ml-auto sm:block flex flex-col items-center">
+      <div className="mr-auto ml-auto sm:block flex flex-col items-center">
         <div className="md:mb-[30px] mb-5">
           <Link href={"/"}>
             <a>
-            <HeaderLogoIcon />
+              <HeaderLogoIcon />
             </a>
           </Link>
         </div>
         <div className="sm:max-w-[515px] max-w-[315px] text-storm-gray sm:text-title text-small">
-        After entering your email, you can quickly change your password by clicking the link in your mailbox.
+          After entering your email, you can quickly change your password by
+          clicking the link in your mailbox.
         </div>
         <TextBox
           type={"text"}
@@ -59,21 +73,11 @@ const RecoveryForm: FC = () => {
             "sm:w-[500px] w-[300px] flex items-center md:mb-[30px] mb-[15px] md:mt-[15px] mt-2.5"
           }
           name="email"
-          error={errors?.email}
-          rule={{
-            ...register("email", {
-              required: "E-mail is required",
-              pattern: {
-                value:
-                  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                message: "Please enter a valid e-mail here",
-              },
-            }),
-          }}
+          onChange={handleChange}
         />
         <Modal
         isOpen={showModal}
-        onRequestClose={() => {setShowModal(false); router.push("/login")}}
+        onRequestClose={() => {setShowModal(false)}}
         style={customStyles}
         overlayClassName="modal-overlay"
         >
@@ -83,14 +87,16 @@ const RecoveryForm: FC = () => {
           </div>
         </Modal>
         <Button
-        type="submit"
-        color="#0038FF"
-        onClick={() => setShowModal(true)}
-        radius="7px"
+          type="submit"
+          color="#0038FF"
+          onClick={ChangePassword}
+          radius="7px"
         >
-            <div className="text-white py-2.5 pl-5 pr-2.5 sm:w-[500px] w-[300px] transition-all">Send</div>
+          <div className="text-white py-2.5 pl-5 pr-2.5 sm:w-[500px] w-[300px] transition-all">
+            Send
+          </div>
         </Button>
-      </form>
+      </div>
     </>
   );
 };

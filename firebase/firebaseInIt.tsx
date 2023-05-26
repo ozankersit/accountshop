@@ -29,7 +29,7 @@ const writeData = () => {
   }
   setDoc(specialOfTheDay, docData)
   .then(() => {
-    console.log("DATA SETTED")
+    console.log("DATA SET")
   })
   .catch((error) => {
     console.log(`error: ${error}`)
