@@ -86,7 +86,7 @@ const DashboardForm = () => {
         }),
       }}
       />
-      <TextBox
+      {/* <TextBox
         type="text"
         name="address"
         placeholder="Address"
@@ -121,7 +121,7 @@ const DashboardForm = () => {
         rule={{
           ...register("discord"),
         }}
-      />
+      /> */}
       <Button type="submit" color="#0038FF" radius="7px" className="py-2.5 px-6 mb-10">
         <div className="flex items-center gap-[5px]">
           <SaveIcon/>
