@@ -8,11 +8,11 @@ interface IProps {
 const ProfileRightMenu: FC<IProps> = ({menuTitle, children}) => {
   return (
     <div className="px-[50px] rounded-[7px] pt-[70px] flex flex-col">
-        <details>
-        <summary>{menuTitle}</summary>
-        <hr className="text-storm-gray mr-10 lg:block hidden w-full"/>
+        <div>
+        <span>{menuTitle}</span>
+        <hr className="text-storm-gray mr-10 lg:block hidden w-[820px]"/>
         {children}
-        </details>
+        </div>
     </div>
   )
 }

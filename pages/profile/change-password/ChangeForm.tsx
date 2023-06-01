@@ -21,7 +21,12 @@ const ChangeForm = () => {
       });
   };
 
-  return <Button onClick={ChangePassword}>Change Password</Button>;
+  return (
+    <div className="p-12 flex justify-center items-center">
+    <Button type="submit" color="#0038FF" radius="7px" className="py-2.5 px-6 mb-12" onClick={ChangePassword}> <span className="text-white">Change Password</span> </Button>
+
+    </div>
+  ) 
 };
 
 export default ChangeForm;

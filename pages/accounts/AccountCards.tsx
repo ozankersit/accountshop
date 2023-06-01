@@ -21,13 +21,13 @@ interface IProps {
 const AccountCards: FC<IProps> = ({ title }) => {
   const { user } = useAuth();
   return (
-    <div className="w-full max-w-sm p-4 bg-white rounded-lg shadow sm:p-8 hover:shadow-2xl hover:translate-y-2 transition duration-300 ease-in-out">
+    <div className="w-full max-w-[378px] min-w-[378px] p-4 bg-white rounded-lg shadow sm:p-8 hover:shadow-2xl hover:translate-y-2 transition duration-300 ease-in-out">
       <h5 className="mb-4 text-title font-medium text-dark md:whitespace-nowrap whitespace-normal flex-wrap">
         {title}
       </h5>
-      <div className="flex items-baseline text-gray-90">
-        <span className="text-head font-semibold text-black">$</span>
-        <span className="text-xl font-extrabold tracking-tight text-black">2</span>
+      <div className="flex items-baseline text-dark">
+        <span className="text-head font-semibold text-dark">$</span>
+        <span className="text-xl font-extrabold tracking-tight text-dark">2</span>
         <span className="ml-1 text-title font-normal text-dark">/per</span>
       </div>
       <ul role="list" className="space-y-5 my-7">

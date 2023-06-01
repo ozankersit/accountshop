@@ -59,58 +59,57 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
   const router = useRouter();
   return (
     <div className="flex gap-2.5 md:px-[150px] px-5 items-center mt-[93px] mb-[153px] h-screen">
-      
       <div className=" flex flex-col gap-10 bg-white max-w-xs pl-7 rounded-[7px]">
-        <details>
-        <summary className="flex gap-2.5 mt-12 mr-16 items-center">
-          <div className="py-2.5">
-            <span className="text-white py-[13px] px-[17px] bg-primary rounded-[10px]">
-              {user?.displayName?.charAt(0)}
+        <div>
+          <span className="flex gap-2.5 mt-12 mr-16 items-center">
+            <div className="py-2.5">
+              <span className="text-white py-[13px] px-[17px] bg-primary rounded-[10px]">
+                {user?.displayName?.charAt(0)}
+              </span>
+            </div>
+            <span className="text-dark text-title whitespace-nowrap">
+              {user?.displayName}
             </span>
-          </div>
-          <span className="text-dark text-title whitespace-nowrap">
-            {user?.displayName}
           </span>
-        </summary>
-        <div className="flex flex-col gap-7 pb-32">
-          {tabs.map((item) => (
-            <Link href={`${item.route}`} key={item.id}>
-              <div
-                className={`flex flex-row-reverse justify-end gap-2 items-center cursor-pointer`}
-              >
-                <span
-                  className={`text-storm-gray ${
-                    router.route == `${item.route}` ? "!text-dark" : null
-                  }`}
-                >
-                  {item.title}
-                </span>
+          <div className="flex flex-col gap-7 mt-[50px] pb-32">
+            {tabs.map((item) => (
+              <Link href={`${item.route}`} key={item.id}>
                 <div
-                  className={`${
-                    router.route == `${item.route}`
-                      ? "dashboard-left-menu"
-                      : null
-                  }`}
+                  className={`flex flex-row-reverse justify-end gap-2 items-center cursor-pointer`}
                 >
-                  {item.icon}
+                  <span
+                    className={`text-storm-gray ${
+                      router.route == `${item.route}` ? "!text-dark" : null
+                    }`}
+                  >
+                    {item.title}
+                  </span>
+                  <div
+                    className={`${
+                      router.route == `${item.route}`
+                        ? "dashboard-left-menu"
+                        : null
+                    }`}
+                  >
+                    {item.icon}
+                  </div>
                 </div>
+              </Link>
+            ))}
+            <div
+              className={`flex flex-row-reverse justify-end gap-2 items-center cursor-pointer`}
+            >
+              <Button onClick={handleLogout}>
+                <span className="text-primary">Log Out</span>
+              </Button>
+              <div>
+                <LogOutIcon />
               </div>
-            </Link>
-          ))}
-          <div
-            className={`flex flex-row-reverse justify-end gap-2 items-center cursor-pointer`}
-          >
-            <Button onClick={handleLogout}>
-              <span className="text-primary">Log Out</span>
-            </Button>
-            <div>
-              <LogOutIcon />
             </div>
           </div>
         </div>
-        </details>
       </div>
-      
+
       <div className="bg-white rounded-[7px]">{children}</div>
     </div>
   );

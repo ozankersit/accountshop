@@ -122,7 +122,7 @@ const DashboardForm = () => {
           ...register("discord"),
         }}
       /> */}
-      <Button type="submit" color="#0038FF" radius="7px" className="py-2.5 px-6 mb-10">
+      <Button type="submit" color="#0038FF" radius="7px" className="py-2.5 px-6 mb-12">
         <div className="flex items-center gap-[5px]">
           <SaveIcon/>
         <span className="text-white">Save Changes</span>
