@@ -7,6 +7,7 @@ import TextBox from "../inputs/TextBox";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useAuth } from "../../context/AuthContext";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 interface IProps {
   email: string;
@@ -26,10 +27,23 @@ export const LoginForm: FC = () => {
   const onSubmit = async (data: IProps) => {
     try {
       await signIn(data.email, data.password);
-      console.log(data)
+      console.log(data);
       router.push("/");
     } catch (error: any) {
       console.log(error.message);
+    }
+  };
+
+  const onGoogleClick = async () => {
+    try {
+      const auth = getAuth();
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      router.push("/");
+      //check if user email already exits
+    } catch (error) {
+      console.log("Could not authorize with google");
     }
   };
 
@@ -92,9 +106,12 @@ export const LoginForm: FC = () => {
       <div className="text-center text-title text-storm-gray mt-[30px] flex items-center justify-center dotted-line whitespace-nowrap">
         or continue with
       </div>
-      <div className="flex bg-white rounded-[7px] py-2.5 pr-2.5 pl-5 mt-[30px] sm:w-[500px] w-[300px] sm:mr-0 mr-5">
+      <div className="cursor-pointer flex bg-white rounded-[7px] py-2.5 pr-2.5 pl-5 mt-[30px] sm:w-[500px] w-[300px] sm:mr-0 mr-5">
         <GoogleIcon />
-        <span className="ml-2.5 text-title text-storm-gray">
+        <span
+          onClick={onGoogleClick}
+          className="ml-2.5 text-title text-storm-gray"
+        >
           Sign in with Google
         </span>
       </div>

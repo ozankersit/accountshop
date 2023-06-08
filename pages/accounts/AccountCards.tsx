@@ -3,6 +3,7 @@ import ListCheckIcon from "../../components/Icons/ListCheckIcon";
 import Link from "next/link";
 import { getAuth } from "firebase/auth";
 import { useAuth } from "../../context/AuthContext";
+import classNames from "classnames";
 
 const listItems = [
   { id: 1, content: "Lifetime Warranty" },
@@ -27,7 +28,9 @@ const AccountCards: FC<IProps> = ({ title }) => {
       </h5>
       <div className="flex items-baseline text-dark">
         <span className="text-head font-semibold text-dark">$</span>
-        <span className="text-xl font-extrabold tracking-tight text-dark">2</span>
+        <span className="text-xl font-extrabold tracking-tight text-dark">
+          2
+        </span>
         <span className="ml-1 text-title font-normal text-dark">/per</span>
       </div>
       <ul role="list" className="space-y-5 my-7">
@@ -54,8 +57,9 @@ const AccountCards: FC<IProps> = ({ title }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:!bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-200 px-5 py-2.5 flex justify-center w-full text-center bg-primary rounded-lg"
+          className={classNames(`text-white hover:!bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-200 px-5 py-2.5 flex justify-center w-full text-center bg-primary rounded-lg tooltip`,{'opacity-5': !user.uid})}
         >
+          { !user.uid && <span className="tooltiptext whitespace-nowrap !opacity-100">You Must Be Login</span>}
           Buy Now
         </a>
       </Link>
