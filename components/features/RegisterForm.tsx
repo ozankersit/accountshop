@@ -125,7 +125,7 @@ export const RegisterForm: FC = () => {
       </div>
       <div className="cursor-pointer flex bg-white rounded-[7px] py-2.5 pr-2.5 pl-5 mt-[30px] sm:w-[500px] w-[300px] sm:mr-0 mr-5">
         <GoogleIcon />
-        <span onClick={onGoogleClick} className="ml-2.5 text-title text-storm-gray">
+        <span onClick={onGoogleClick} className="ml-2.5 text-title text-storm-gray ">
           Sign up with Google
         </span>
       </div>
