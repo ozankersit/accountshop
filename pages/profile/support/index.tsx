@@ -1,6 +1,7 @@
 import ProtectedRoute from "../../../components/routes/ProtectedRoute";
 import ProfileLeftMenu from "../ProfileLeftMenu";
 import ProfileRightMenu from "../ProfileRightMenu";
+import SupportForm from "./SupportForm";
 
 
 const Support = () => {
@@ -8,7 +9,7 @@ const Support = () => {
     <ProtectedRoute>
       <ProfileLeftMenu>
         <ProfileRightMenu menuTitle="Support">
-        asd
+        <SupportForm/>
         </ProfileRightMenu>
       </ProfileLeftMenu>
     </ProtectedRoute>

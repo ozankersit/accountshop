@@ -15,7 +15,7 @@ export const Showcase: FC = () => {
           feature.
         </p>
         <div className="flex flex-wrap items-center showcase-button">
-        <Link href="/">
+        <Link href="/accounts">
           <Button className="bg-blue-button rounded-[7px] w-[225px] h-[60px] text-title-bold flex items-center p-5">
             Shop Now
             <div className="ml-[15px]">

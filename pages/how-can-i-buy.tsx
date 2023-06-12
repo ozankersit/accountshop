@@ -107,7 +107,7 @@ const HowCanIBuy = () => {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate"
             </p>
-            <div className="confirmation-phase md:hidden block mt-5 ml-5 mr-5 flex justify-center">
+            <div className="confirmation-phase md:hidden mt-5 ml-5 mr-5 flex justify-center">
               <BuyPhaseIcon />
             </div>
           </div>

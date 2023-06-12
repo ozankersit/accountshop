@@ -25,19 +25,19 @@ const tabs = [
     route: "/profile/dashboard",
   },
   {
-    id: 5,
+    id: 2,
     icon: <KeyIcon />,
     title: "Change Password",
     route: "/profile/change-password",
   },
   {
-    id: 6,
+    id: 3,
     icon: <MailIcon />,
     title: "Change Email",
     route: "/profile/change-email",
   },
   {
-    id: 7,
+    id: 4,
     icon: <QuestionIcon />,
     title: "Support",
     route: "/profile/support",
@@ -58,7 +58,7 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
   const user = auth.currentUser;
   const router = useRouter();
   return (
-    <div className="flex gap-2.5 md:px-[150px] px-5 items-center mt-[93px] mb-[153px] h-screen">
+    <div className="flex gap-2.5 md:px-[150px] px-5 items-center mt-[93px] mb-[153px] h-screen overflow-auto">
       <div className=" flex flex-col gap-10 bg-white max-w-xs pl-7 rounded-[7px]">
         <div>
           <span className="flex gap-2.5 mt-12 mr-16 items-center">
@@ -109,7 +109,6 @@ const ProfileLeftMenu: FC<IProps> = ({ children }) => {
           </div>
         </div>
       </div>
-
       <div className="bg-white rounded-[7px]">{children}</div>
     </div>
   );

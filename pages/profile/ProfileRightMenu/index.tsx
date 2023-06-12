@@ -10,7 +10,7 @@ const ProfileRightMenu: FC<IProps> = ({menuTitle, children}) => {
     <div className="px-[50px] rounded-[7px] pt-[70px] flex flex-col">
         <div>
         <span>{menuTitle}</span>
-        <hr className="text-storm-gray mr-10 lg:block hidden w-[820px]"/>
+        <hr className="text-storm-gray mr-10 w-[820px]"/>
         {children}
         </div>
     </div>
