@@ -10,7 +10,7 @@ const BackToTopButton = () => {
       };
   return (
     <button
-    className='fixed bottom-[30px] right-5 border rounded-[50%] border-black p-3' onClick={backToTop}>
+    className='fixed bottom-[30px] right-5 border rounded-[50%] border-black p-3 bg-white' onClick={backToTop}>
         <BackToTopIcon/>
     </button>
   )

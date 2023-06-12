@@ -1,9 +1,7 @@
 import React, { FC } from "react";
 import ListCheckIcon from "../../components/Icons/ListCheckIcon";
 import Link from "next/link";
-import { getAuth } from "firebase/auth";
 import { useAuth } from "../../context/AuthContext";
-import classNames from "classnames";
 
 const listItems = [
   { id: 1, content: "Lifetime Warranty" },
@@ -57,9 +55,9 @@ const AccountCards: FC<IProps> = ({ title }) => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className={classNames(`text-white hover:!bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-200 px-5 py-2.5 flex justify-center w-full text-center bg-primary rounded-lg tooltip`,{'opacity-5': !user.uid})}
+          className={"text-white hover:!bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-200 px-5 py-2.5 flex justify-center w-full text-center bg-primary rounded-lg tooltip"}
         >
-          { !user.uid && <span className="tooltiptext whitespace-nowrap !opacity-100">You Must Be Login</span>}
+          {!user.uid ? <span className="tooltiptext whitespace-nowrap">You Must Be Login</span> : null}
           Buy Now
         </a>
       </Link>

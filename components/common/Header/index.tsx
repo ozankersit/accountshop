@@ -22,26 +22,11 @@ export const Header: FC = () => {
     <header className="md:py-[30px] py-[25px] md:px-[150px] px-5 flex justify-between items-center bg-concrete w-full">
       <HeaderLogoIcon />
       <div className="xl:flex hidden justify-center items-center pt-2.5 gap-[50px]">
-        <Link href="/">
-          <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            Home
-          </span>
-        </Link>
-        <Link href="/accounts">
-          <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            Accounts
-          </span>
-        </Link>
-        <Link href="/how-can-i-buy">
-          <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            How Can I Buy ?
-          </span>
-        </Link>
-        <Link href="/#faq-page">
-          <span className="text-title text-dark cursor-pointer whitespace-nowrap">
-            FAQ
-          </span>
-        </Link>
+        {menuItems.map((item) => (
+          <Link href={item.route}>
+            <span key={item.id} className="text-title text-dark cursor-pointer whitespace-nowrap">{item.title}</span>
+          </Link>
+        ))}
         <div className={`items-center gap-2.5 flex cursor-pointer`}>
           {!user.uid ? (
             <Link href="/login">
@@ -102,12 +87,12 @@ export const Header: FC = () => {
                 </li>
               ))}
               <div className={`flex flex-col gap-5 ${!user.uid ? "block":"hidden"}`}>
-              <li>
-                <span className="text-white">Sign in</span>
+              <li className="text-white">
+                <Link href={"/login"} >Sign in</Link>
               </li>
-              <li>
+              <li className="text-white">
                 {" "}
-                <span className="text-white">Sign Up</span>{" "}
+                <Link href={"/register"}>Sign Up</Link>{" "}
               </li>
               </div>
             </ul>
